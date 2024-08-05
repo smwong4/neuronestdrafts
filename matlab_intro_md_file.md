@@ -1,49 +1,37 @@
-# MATLAB Resource for Psychology and Neuroscience Graduate Students
+# MATLAB Resource
 
-## What is Matlab?
+## What is MATLAB?
 
-MATLAB (Matrix Laboratory) is both a programming language and an interactive environment developed by MathWorks. It is designed for high-performance numerical computation, visualization, and programming. MATLAB is particularly powerful for matrix manipulations, making it ideal for a wide range of applications in engineering, physics, finance, biology, and neuroscience. It enables users to perform tasks quickly and efficiently by combining interactive tools and MATLAB commands, streamlining workflows, and...
-
-### Key Features:
-
-- **Programming Language:** MATLAB is centered around matrices, which allows for efficient computation and data manipulation.
-- **Interactive Environment:** Users can leverage a graphical interface to point and click on icons to run commands, although MATLAB primarily operates through a command line interface. This command-line approach, while initially appearing tedious, provides greater speed, flexibility, and efficiency in running programs and analyzing data.
-- **Advantages for Researchers:** Fluency in MATLAB programming saves time, minimizes errors, and enhances versatility as a scientist. It facilitates data analysis, statistical testing, signal processing, computational modeling, machine learning, and automation.
-
-## How can you use Matlab in your research?
+MATLAB is both a programming language and an interactive environment well utilized by researchers for versatile reasons like running programs and analyzing data. While MATLAB has a graphical interface with point and click on icons to run commands ("MATLAB Desktop"), MATLAB primarily operates through a command line interface. 
 
 ### Applications in Research:
 
-- **Data Analysis:** MATLAB excels in handling large datasets, enabling complex data analysis and visualization.
-- **Statistical Analysis:** Researchers can conduct statistical tests, data fitting, and hypothesis testing.
-- **Signal Processing:** Essential for analyzing and visualizing EEG, fMRI, and other brain imaging data.
-- **Modeling:** Development of computational models to simulate neural processes and other scientific phenomena.
-- **Machine Learning:** Implementation of machine learning algorithms for predictive modeling, classification, and clustering.
-- **Automation:** Automate repetitive tasks, streamline workflows, and ensure consistency in data processing and analysis.
+- Advanced statistical testing and data fitting
+- Automate routine data processing tasks
+- Designing and executing complex experimental tasks, including real-time data collection and behavioral tracking
+- Develop computational models and apply machine learning algorithms
+- Processing and analyzing neuroimaging data
+
+This resource will focus on the basics of MATLAB to develop the skills necessary for using MATLAB in neuroimaging data analysis. 
 
 ## Navigating Workspace Overview
 
 ### Workspace Basics:
 
-When you first open MATLAB, you will notice that it has four distinct sections: three windows and a ribbon of buttons at the top, similar to the layout of Microsoft Word. The window on the left is the **Current Folder** (Navigation window), the central window is the **Command Window**, and the upper-right window is the **Workspace**.
+When you first open MATLAB, you will notice that it has four distinct sections: three windows and a ribbon of buttons at the top. The window on the left is the **Current Folder** (Navigation window), the central window is the **Command Window**, and the upper-right window is the **Workspace**.
 
 - **Current Folder:** Shows a list of all the folders located within the folder you are currently in.
 - **Command Window:** The main area where you can type commands directly and see their output.
 - **Workspace:** Displays variables created during the session, providing an overview of the data you are working with.
 - **Command History:** (not always visible by default) Logs commands entered in the Command Window.
 
-MATLAB organizes folders and files using a directory tree, starting with the root directory (/). The directory tree resembles an upside-down tree where root is the base and all other folders extend from it like branches.
 
 ### Navigating Directories:
 
+MATLAB organizes folders and files using a directory tree, starting with the root directory (/). 
+
 - **Absolute Path:** Specifies the entire path from the root directory. E.g., `ls /Users/andrewjahn`
 - **Relative Path:** Specifies the path relative to the current directory. E.g., `cd Desktop`
-
-### Key Commands:
-
-- **`pwd` (Print Working Directory):** Displays the current directory.
-- **`cd` (Change Directory):** Changes the current directory.
-- **`ls` (List):** Lists the contents of the current directory.
 
 ### Special Directories:
 
