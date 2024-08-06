@@ -1,8 +1,6 @@
-# MATLAB Resource
+# 1. What is MATLAB?
 
-## 1. What is MATLAB?
-
-MATLAB is both a programming language and an interactive environment well utilized by researchers for versatile reasons like running programs and analyzing data. While MATLAB has a graphical interface with point and click on icons to run commands ("MATLAB Desktop"), MATLAB primarily operates through a command line interface. 
+MATLAB is a programming language and an interactive environment utilized by researchers for versatile reasons. While MATLAB has a graphical interface with point and click on icons to run commands ("MATLAB Desktop"), MATLAB primarily operates through a command line interface. 
 
 ### Applications in Research:
 
@@ -14,9 +12,16 @@ MATLAB is both a programming language and an interactive environment well utiliz
 
 This resource will focus on the basics of MATLAB to develop the skills necessary for using MATLAB in neuroimaging data analysis. 
 
-## 2. Workspace Basics
+# 2. Workspace Basics
 
-### MATLAB Desktop Interface:
+You can access MATLAB directly from your local computer (suggested) or from a standard web browser with MATLAB Online. To access MATLAB you must have a MathWorks Account and a MATLAB license (usually obtained through your university).
+
+[Instructions on installing MATLAB:](https://www.mathworks.com/help/install/ug/install-products-with-internet-connection.html)
+
+[Instructions on accessing MATLAB Online:](https://www.mathworks.com/help/matlab-online-server/ug/matlab-online.html)
+
+
+### MATLAB Interface:
 
 When you first open MATLAB, you will notice that it has several windows and a ribbon of buttons at the top. The window on the left is the **Current Folder**, the central window is the **Command Window**, and the upper-right window is the **Workspace**.
 
@@ -31,7 +36,7 @@ When you first open MATLAB, you will notice that it has several windows and a ri
 ![image](https://github.com/user-attachments/assets/27b88c90-33be-4848-a7ee-04495f7446e0)
 
 
-### Custimization and Setting Preferences
+### Customization and Setting Preferences
 
 MATLAB offers flexible customization options to optimize your workflow. Some ways to tailor the interface include...
 
@@ -77,49 +82,47 @@ MATLAB organizes folders and files using a directory tree, starting with the roo
 
 ### Keyboard Shortcuts for MATLAB Command Window
 
-This cheat sheet includes common keyboard shortcuts that are handy when coding in MATLAB's Command Window, mirroring the functionality often used in terminal environments.
+Keyboard shortcuts in MATLAB's Command Window mirror the functionality often used in terminal environments. 
+
+Note - These shortcuts will only work if you have MATLAB installed in your system. MATLAB Online provides access to MATLAB from a standard web browser. Because MATLAB Online runs in a browser, navigation using the keyboard is slightly different.
+
+
 
 #### For Windows Users
 
 | Shortcut          | Description                                      |
 |-------------------|--------------------------------------------------|
-| `Tab`             | Auto-completes commands and variable names based on partially typed text. |
-| `Esc`             | Cancels the current command line input without executing it. |
 | `Up Arrow`        | Scrolls through the history to recall previous commands, useful for repetition or modification. |
 | `Down Arrow`      | Scrolls forward in the command history after using the Up Arrow. |
-| `Ctrl + C`        | Interrupts the execution of the current command or script. |
-| `Ctrl + A`        | Moves the cursor to the beginning of the line. |
-| `Ctrl + E`        | Moves the cursor to the end of the line. |
-| `Ctrl + L`        | Clears the screen, keeping the history intact. |
-| `Ctrl + Up Arrow` | Scrolls up through the output to view earlier outputs and messages. |
-| `Ctrl + Down Arrow` | Scrolls down through the output to return to more recent outputs. |
-| `Home`            | Jumps to the beginning of the current line. |
-| `End`             | Jumps to the end of the current line. |
+| `Home` or `Ctrl + A`  | Jumps to the beginning of the current line. |
+| `End` or `Ctrl + E`   | Jumps to the end of the current line. |
+| `Tab`             | Auto-completes commands and variable names based on partially typed text. |
 | `Backspace`       | Deletes the character to the left of the cursor. |
 | `Delete`          | Deletes the character right at the cursor position. |
 | `Enter`           | Executes the command currently typed in the Command Window. |
 | `Shift + Enter`   | Continues command entry onto the next line for multi-line commands. |
+| `Ctrl + L`        | Clears the screen, keeping the history intact. |
+| `Esc`             | Cancels the current command line input without executing it. |
+| `Ctrl + C`        | Interrupts the execution of the current command or script. |
+
+
 
 #### For Mac Users
 
 | Shortcut          | Description                                      |
 |-------------------|--------------------------------------------------|
-| `Tab`             | Auto-completes commands and variable names based on partially typed text. |
-| `Esc`             | Cancels the current command line input without executing it. |
 | `Up Arrow`        | Scrolls through the history to recall previous commands. |
 | `Down Arrow`      | Scrolls forward in the command history after using the Up Arrow. |
-| `Cmd + C`         | Interrupts the execution of the current command or script. |
-| `Cmd + A`         | Moves the cursor to the beginning of the line. |
-| `Cmd + E`         | Moves the cursor to the end of the line. |
-| `Cmd + L`         | Clears the screen, keeping the history intact. |
-| `Cmd + Up Arrow`  | Scrolls up through the output to view earlier outputs and messages. |
-| `Cmd + Down Arrow`| Scrolls down through the output to return to more recent outputs. |
-| `Fn + Left Arrow` | Mimics the Home key, jumping to the beginning of the line. |
-| `Fn + Right Arrow`| Mimics the End key, jumping to the end of the line. |
+| `Cmd + Left Arrow` or `Ctrl + A`| Mimics the Home key, jumping to the beginning of the line. |
+| `Cmd + Right Arrow` or `Ctrl + E`| Mimics the End key, jumping to the end of the line. |
+| `Tab`             | Auto-completes commands and variable names based on partially typed text. |
 | `Delete`          | Deletes the character to the left of the cursor. (Mac keyboards typically do not have a separate Backspace key.) |
 | `Fn + Delete`     | Deletes the character right at the cursor position. |
 | `Return`          | Executes the command currently typed in the Command Window. |
 | `Shift + Return`  | Continues command entry onto the next line for multi-line commands. |
+| `Cmd + K`         | Clears the screen, keeping the history intact. |
+| `Esc`             | Cancels the current command line input without executing it. |
+| `Ctrl + C`         | Interrupts the execution of the current command or script. |
 
 
 ### MATLAB File Types:
@@ -135,13 +138,12 @@ This cheat sheet includes common keyboard shortcuts that are handy when coding i
 - **.fig files**: Figure files that save MATLAB graphical outputs. They enable you to reopen and modify figures later, preserving the graphical data and properties exactly as saved.
 
 
-### File Formats for Import and Export
+### Importing and Exporting Files
 
 MATLAB supports importing various data formats such as TXT, CSV, XLS, XLSX, JPG, PNG, etc. You can find additional documentation including functions and examples [here](https://www.mathworks.com/help/matlab/import_export/supported-file-formats-for-import-and-export.html).
 
 
-### Commands for File Handling
-
+### Commands for Handling Files
 | Command                      | Description                                           |
 |------------------------------|-------------------------------------------------------|
 | `save 'filename'`            | Saves workspace variables to a file.                  |
@@ -159,109 +161,19 @@ MATLAB supports importing various data formats such as TXT, CSV, XLS, XLSX, JPG,
 
 
 
-### External Tutorial
-MATLAB Desktop – Importing Data, Customizing the MATLAB Desktop, and Setting Preferences from MathWorks Self-Paced Online Courses: MATLAB Desktop Tools and Troubleshooting Scripts Course
+### Suggested Tutorials for Workspace Basics
 
-[Tutorial Link](https://matlabacademy.mathworks.com/details/matlab-desktop-tools-and-troubleshooting-scripts/otmldts)
+**[15 MIN] "The MATLAB Desktop" Module from MATLAB Desktop Tools and Troubleshooting Scripts Course (MathWorks Self-Paced Online Courses)**
+This tutorial briefly reviews how to import data, customize your workspace, and set preferences.
 
-[Quick Reference](https://matlabacademy.mathworks.com/artifacts/quick-reference.html?course=otmldts&language=en&release=R2024a)
+[Tutorial Link](https://matlabacademy.mathworks.com/details/matlab-desktop-tools-and-troubleshooting-scripts/otmldts#module=2)
 
 
-## Basics of MATLAB Syntax
+# 3. MATLAB Syntax
 
-This section provides an overview of fundamental MATLAB syntax, essential for writing and understanding MATLAB code.
+This section provides an overview of fundamental MATLAB syntax.
 
-#### MATLAB Operators and Special Characters
-
-This section provides an overview of MATLAB operators and special characters, which are essential for writing and understanding MATLAB code.
-
-### Relational Operators
-
-| Operator | Description         | Example       |
-|----------|---------------------|---------------|
-| `==`     | Equal to            | `a == b`      |
-| `~=`     | Not equal to        | `a ~= b`      |
-| `>`      | Greater than        | `a > b`       |
-| `<`      | Less than           | `a < b`       |
-| `>=`     | Greater than or equal to | `a >= b` |
-| `<=`     | Less than or equal to    | `a <= b` |
-
-### Logical Operators
-
-| Operator | Description         | Example       |
-|----------|---------------------|---------------|
-| `&`      | Logical AND         | `a & b`       |
-| `|`      | Logical OR          | `a | b`       |
-| `~`      | Logical NOT         | `~a`          |
-| `xor`    | Logical EXCLUSIVE OR| `xor(a, b)`   |
-
-### Special Characters
-
-| Character | Description         | Example       |
-|-----------|---------------------|---------------|
-| `:`       | Colon               | `1:10`        |
-| `;`       | Semicolon           | `a = 5;`      |
-| `%`       | Percent             | `% comment`   |
-| `=`       | Assignment Operator | `a = 5`       |
-| `.`       | Decimal Point       | `3.14`        |
-| `,`       | Comma               | `[1, 2, 3]`   |
-| `()`      | Parentheses         | `a(1)`        |
-| `[]`      | Square Brackets     | `[1, 2, 3]`   |
-| `{}`      | Curly Braces        | `{1, 2, 3}`   |
-| `'''`     | Single Quote        | `'text'`      |
-| `...`     | Ellipsis            | `a = 1 + ...` (continues on next line) # MATLAB Operators and Special Characters
-
-This section provides an overview of MATLAB operators and special characters, which are essential for writing and understanding MATLAB code.
-
-## Arithmetic Operators
-
-| Operator | Description         | Example       |
-|----------|---------------------|---------------|
-| `+`      | Addition            | `a + b`       |
-| `-`      | Subtraction         | `a - b`       |
-| `*`      | Multiplication      | `a * b`       |
-| `/`      | Right Division      | `a / b`       |
-| `\`      | Left Division       | `a \ b`       |
-| `^`      | Power               | `a ^ b`       |
-| `.`      | Decimal Point       | `3.14`        |
-
-## Relational Operators
-
-| Operator | Description         | Example       |
-|----------|---------------------|---------------|
-| `==`     | Equal to            | `a == b`      |
-| `~=`     | Not equal to        | `a ~= b`      |
-| `>`      | Greater than        | `a > b`       |
-| `<`      | Less than           | `a < b`       |
-| `>=`     | Greater than or equal to | `a >= b` |
-| `<=`     | Less than or equal to    | `a <= b` |
-
-## Logical Operators
-
-| Operator | Description         | Example       |
-|----------|---------------------|---------------|
-| `&`      | Logical AND         | `a & b`       |
-| `|`      | Logical OR          | `a | b`       |
-| `~`      | Logical NOT         | `~a`          |
-| `xor`    | Logical EXCLUSIVE OR| `xor(a, b)`   |
-
-## Special Characters
-
-| Character | Description         | Example       |
-|-----------|---------------------|---------------|
-| `:`       | Colon               | `1:10`        |
-| `;`       | Semicolon           | `a = 5;`      |
-| `%`       | Percent             | `% comment`   |
-| `=`       | Assignment Operator | `a = 5`       |
-| `.`       | Decimal Point       | `3.14`        |
-| `,`       | Comma               | `[1, 2, 3]`   |
-| `()`      | Parentheses         | `a(1)`        |
-| `[]`      | Square Brackets     | `[1, 2, 3]`   |
-| `{}`      | Curly Braces        | `{1, 2, 3}`   |
-| `'''`     | Single Quote        | `'text'`      |
-| `...`     | Ellipsis            | `a = 1 + ...` (continues on next line) |
-
-### Detailed Usage of Special Characters
+### Special Characters 
 
 - **Colon `:`**
   - Used to create vectors, specify ranges, and index arrays.
@@ -312,15 +224,36 @@ This section provides an overview of MATLAB operators and special characters, wh
     a = 1 + 2 + 3 + ...
         4 + 5 + 6;
     ```
+    
 
-This chart provides a detailed reference for MATLAB operators and special characters, which are fundamental for performing various operations and structuring MATLAB code effectively.
+### Relational Operators
+
+| Operator | Description         | Example       |
+|----------|---------------------|---------------|
+| `==`     | Equal to            | `a == b`      |
+| `~=`     | Not equal to        | `a ~= b`      |
+| `>`      | Greater than        | `a > b`       |
+| `<`      | Less than           | `a < b`       |
+| `>=`     | Greater than or equal to | `a >= b` |
+| `<=`     | Less than or equal to    | `a <= b` |
+
+### Logical Operators
+
+| Operator | Description         | Example       |
+|----------|---------------------|---------------|
+| `&`      | Logical AND         | `a & b`       |
+| `|`      | Logical OR          | `a | b`       |
+| `~`      | Logical NOT         | `~a`          |
+| `xor`    | Logical EXCLUSIVE OR| `xor(a, b)`   |
 
 
-## 4. Working with Variables in MATLAB
+
+
+# 4. Working with Variables in MATLAB
 
 This section provides an overview of how to handle variables in MATLAB, including how to create, manipulate, and delete them, as well as working with vectors and matrices.
 
-#### Creating Variables
+### Creating Variables
 
 Variables in MATLAB are created simply by assigning values to them. MATLAB does not require explicit declaration of variable types.
 
@@ -390,5 +323,13 @@ To view the variables currently stored in your workspace, you can use the Worksp
 | `who;`              | Lists all variables in the workspace.                 |
 | `whos;`             | Lists all variables with detailed information including size, bytes, and class. |
 
-These basic commands and techniques provide a foundation for working with variables, vectors, and matrices in MATLAB, essential for any type of data manipulation and analysis.
+
+
+
+
+## ADDITIONAL RESOURCES FOR MATLAB
+MATLAB Desktop – Importing Data, Customizing the MATLAB Desktop, and Setting Preferences from MathWorks Self-Paced Online Courses: MATLAB Desktop Tools and Troubleshooting Scripts Course
+
+[Tutorial Link](https://matlabacademy.mathworks.com/details/matlab-desktop-tools-and-troubleshooting-scripts/otmldts)
+https://github.com/mikexcohen/EssentialsOfNeuroscienceWithMATLAB/blob/main/module4_FMRI/README.md 
 
