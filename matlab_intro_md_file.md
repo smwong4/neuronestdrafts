@@ -21,7 +21,7 @@ You can access MATLAB directly from your local computer (suggested) or from a st
 [Instructions on accessing MATLAB Online:](https://www.mathworks.com/help/matlab-online-server/ug/matlab-online.html)
 
 
-### MATLAB Interface:
+### 2a. MATLAB Interface:
 
 When you first open MATLAB, you will notice that it has several windows and a ribbon of buttons at the top. The window on the left is the **Current Folder**, the central window is the **Command Window**, and the upper-right window is the **Workspace**.
 
@@ -36,7 +36,7 @@ When you first open MATLAB, you will notice that it has several windows and a ri
 ![image](https://github.com/user-attachments/assets/27b88c90-33be-4848-a7ee-04495f7446e0)
 
 
-### Customization and Setting Preferences
+### 2b. Customization and Setting Preferences
 
 MATLAB offers flexible customization options to optimize your workflow. Some ways to tailor the interface include...
 
@@ -46,11 +46,9 @@ MATLAB offers flexible customization options to optimize your workflow. Some way
 
 For more advanced customizations, navigate to **Preferences** under the Home tab.
 <img width="1000" alt="image" src="https://github.com/user-attachments/assets/cdc7c230-c22d-41e6-917a-ec8468bc5eeb">
-
-[Documentation: Set Command Window Preferences](https://www.mathworks.com/help/matlab/matlab_env/command-window-preferences.html)
  
 
-### Search Path and Directories:
+### 2c. Search Path and Directories:
 
 A **directory** is a location in the file system that can contain files and other directories (subdirectories). It's essentially a folder where files and other folders are organized.
 
@@ -63,9 +61,8 @@ A **path** is a string that specifies the location of a file or directory in the
 
 The **search path** is a subset of all the folders in the file system that MATLAB uses to locate files efficiently. The order of folders on the search path is significant: MATLAB uses the file in the folder nearest to the top when multiple files with the same name exist. For more information, see [What Is the MATLAB Search Path?](https://www.mathworks.com/help/matlab/matlab_env/what-is-the-matlab-search-path.html).
 
-[Documentation: Search Path](https://www.mathworks.com/help/matlab/search-path.html?s_tid=CRUX_lftnav)
 
-### Commands for Navigating Workspace
+### 2d. Command Cheat Sheet
 
 **Directories and Paths**
 | Commands          | Description                                           |
@@ -96,6 +93,7 @@ The **search path** is a subset of all the folders in the file system that MATLA
 | `edit 'filename'`   | Opens the specified file in MATLAB's editor.           |
 
 **Commands**
+
 | Commands          | Description                                           |
 |------------------|-------------------------------------------------------|
 | `doc command`    | Opens the documentation for 'command'. |
@@ -103,8 +101,15 @@ The **search path** is a subset of all the folders in the file system that MATLA
 | `clc`            | Clears all input and output from the Command Window, keeping history. |
 | `quit` or  `exit`| Closes MATLAB. |
 
+**Workspace Management**
+| Commands          | Description                                           |
+|------------------|-------------------------------------------------------|
+| `clc`            | Clears all input and output from the Command Window, keeping history. |
+| `clear`            | Clears all input and output from the Command Window, keeping history. |
+| `quit` or  `exit`| Closes MATLAB. |
 
-### Keyboard Shortcuts for MATLAB Command Window
+
+### 2e. Keyboard Shortcuts for MATLAB Command Window
 
 Keyboard shortcuts in MATLAB's Command Window mirror the functionality often used in terminal environments. 
 
@@ -149,19 +154,54 @@ Note - These shortcuts will only work if you have MATLAB installed in your syste
 | `Ctrl + C`         | Interrupts the execution of the current command or script. |
 
 
-### Suggested Tutorials for Workspace Basics
+### 2f. Suggested Tutorials
 
 **[15 MIN] "The MATLAB Desktop" Module from MATLAB Desktop Tools and Troubleshooting Scripts Course (MathWorks Self-Paced Online Courses)**
 This tutorial briefly reviews how to import data, customize your workspace, and set preferences.
 
 [Tutorial Link](https://matlabacademy.mathworks.com/details/matlab-desktop-tools-and-troubleshooting-scripts/otmldts#module=2)
 
+### 2g. Supplemental Resources 
 
-# 3. MATLAB Syntax
+[Documentation: Set Command Window Preferences](https://www.mathworks.com/help/matlab/matlab_env/command-window-preferences.html)
+
+[Video: Using and Customizing the MATLAB Environment](https://www.youtube.com/watch?v=LEaT9Jp7MdQ&list=PLn0OLiymPak2HkkG-NToKdP7ye7NlpC8D&index=3)
+
+[Documentation: Search Path](https://www.mathworks.com/help/matlab/search-path.html?s_tid=CRUX_lftnav)
+
+
+
+# 3. MATLAB Elements and Syntax
+
+
 
 This section provides an overview of fundamental MATLAB syntax.
 
-### Special Characters 
+### 3a. Basic Elements
+
+Variable
+
+Array 
+
+String
+
+Function
+
+Comment
+
+Cell
+
+
+To help you identify MATLAB® elements, some entries appear in different colors in the Command Window, the Editor, and the Live Editor. By default:
+
+- Keywords are blue.
+- Character vectors and strings are purple.
+- Unterminated character vectors are maroon.
+- Comments are green.
+
+<img width="657" alt="image" src="https://github.com/user-attachments/assets/ab3183e3-f809-4671-b5a6-3e772cf27558">
+
+### 3b. Special Characters 
 
 - **Colon `:`**
   - Used to create vectors, specify ranges, and index arrays.
@@ -177,7 +217,7 @@ This section provides an overview of fundamental MATLAB syntax.
   - Used for comments. Everything after `%` on that line is ignored by MATLAB.
   - Example: `x = 10; % This is a comment`.
 
-- **Assignment Operator `=`**
+- **Equal Sign `=`**
   - Assigns a value to a variable.
   - Example: `a = 5`.
 
@@ -212,28 +252,11 @@ This section provides an overview of fundamental MATLAB syntax.
     a = 1 + 2 + 3 + ...
         4 + 5 + 6;
     ```
-    
 
-### Relational Operators
 
-| Operator | Description         | Example       |
-|----------|---------------------|---------------|
-| `==`     | Equal to            | `a == b`      |
-| `~=`     | Not equal to        | `a ~= b`      |
-| `>`      | Greater than        | `a > b`       |
-| `<`      | Less than           | `a < b`       |
-| `>=`     | Greater than or equal to | `a >= b` |
-| `<=`     | Less than or equal to    | `a <= b` |
 
-### Logical Operators
-
-| Operator | Description         | Example       |
-|----------|---------------------|---------------|
-| `&`      | Logical AND         | `a & b`       |
-| `|`      | Logical OR          | `a | b`       |
-| `~`      | Logical NOT         | `~a`          |
-| `xor`    | Logical EXCLUSIVE OR| `xor(a, b)`   |
-
+### 3e. Code Suggestions and Completions**
+MATLAB offers real-time syntax checking and code suggestions. As you type in the Command Window, Editor, Live Editor, or App Designer, MATLAB suggests function names, variable names, and other elements. MATLAB also indicates matched and mismatched delimiters (e.g., parentheses and brackets) and paired language keywords (e.g., for, if, while, else, and end statements).For more information, see [Check Syntax as You Type](https://www.mathworks.com/help/matlab/matlab_env/check-syntax-as-you-type.html).
 
 
 
@@ -277,6 +300,11 @@ Matrices are two-dimensional arrays of numbers. MATLAB is specifically designed 
 | `A(:,2);`           | Accesses all elements in the second column of `A`.    |
 | `A(1,:);`           | Accesses all elements in the first row of `A`.        |
 
+Cell
+A cell array is a data type in MATLAB that can hold different types of data in an array format. Each element of a cell array is called a cell, and can contain different types or sizes of data. Cell arrays are created using curly braces, e.g., C = {1, 'text', [1, 2, 3]}.
+
+
+
 #### Manipulating Variables
 
 Once variables are created, they can be manipulated using MATLAB's built-in functions and operators.
@@ -291,6 +319,28 @@ Once variables are created, they can be manipulated using MATLAB's built-in func
 | `A * 2;`            | Multiplies each element of matrix `A` by `2`.         |
 | `A * B;`            | Performs matrix multiplication of `A` and `B`.        |
 | `A .* B;`           | Performs element-wise multiplication of `A` and `B`.  |
+
+
+### Relational Operators
+
+| Operator | Description         | Example       |
+|----------|---------------------|---------------|
+| `==`     | Equal to            | `a == b`      |
+| `~=`     | Not equal to        | `a ~= b`      |
+| `>`      | Greater than        | `a > b`       |
+| `<`      | Less than           | `a < b`       |
+| `>=`     | Greater than or equal to | `a >= b` |
+| `<=`     | Less than or equal to    | `a <= b` |
+
+### Logical Operators
+
+| Operator | Description         | Example       |
+|----------|---------------------|---------------|
+| `&`      | Logical AND         | `a & b`       |
+| `|`      | Logical OR          | `a | b`       |
+| `~`      | Logical NOT         | `~a`          |
+| `xor`    | Logical EXCLUSIVE OR| `xor(a, b)`   |
+
 
 #### Deleting Variables
 
@@ -311,6 +361,8 @@ To view the variables currently stored in your workspace, you can use the Worksp
 | `who;`              | Lists all variables in the workspace.                 |
 | `whos;`             | Lists all variables with detailed information including size, bytes, and class. |
 
+### Case and Space Sensitivity
+MATLAB is case-sensitive and space-sensitive. This means that variable and function names like **VariableName** and **variablename** are considered different. 
 
 
 # 5. File Types
