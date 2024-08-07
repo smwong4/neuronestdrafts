@@ -2,7 +2,7 @@
 
 MATLAB is a programming language and an interactive environment utilized by researchers for versatile reasons. While MATLAB has a graphical interface with point and click on icons to run commands ("MATLAB Desktop"), MATLAB primarily operates through a command line interface. 
 
-### Applications in Research:
+### 1a. Applications in Research:
 
 - Advanced statistical testing and data fitting
 - Automate routine data processing tasks
@@ -11,6 +11,10 @@ MATLAB is a programming language and an interactive environment utilized by rese
 - Processing and analyzing neuroimaging data
 
 This resource will focus on the basics of MATLAB to develop the skills necessary for using MATLAB in neuroimaging data analysis. 
+
+### 1b. Supplemental Resources
+
+[MATLAB in Neuroimaging Oveview](https://www.youtube.com/watch?v=0cft-tyRj4o)
 
 # 2. Workspace Basics
 
@@ -64,9 +68,10 @@ The **search path** is a subset of all the folders in the file system that MATLA
 
 ### 2d. Command Cheat Sheet
 
-**Directories and Paths**
+
 | Commands          | Description                                           |
 |------------------|-------------------------------------------------------|
+| **Directories and Paths**              |                               
 | `pwd`            | Prints the current working directory path. |
 | `cd 'folder'`    | Changes the current working directory to 'folder'. |
 | `cd ~`           | Changes the current directory to the user's home directory. |
@@ -81,29 +86,19 @@ The **search path** is a subset of all the folders in the file system that MATLA
 | `addpath 'folder'`| Adds the specified folder to the MATLAB search path. |
 | `rmpath 'folder'`| Removes the specified folder from the MATLAB search path. |
 | `savepath`       | Saves the current MATLAB search path for future sessions. |
-
-**Files**
-| Commands          | Description                                           |
-|------------------|-------------------------------------------------------|
+| **Files**              |       
 | `exist 'name'`   | Checks if a variable, file, or folder 'name' exists. |
 | `load 'filename'`| Loads variables from a file into the workspace. |
 | `save 'filename'`| Saves workspace variables to a file. |
 | `type 'filename'`| Displays the contents of the specified file. |
 | `which 'filename'`   | Returns the full path if the file is on the search path.           |
 | `edit 'filename'`   | Opens the specified file in MATLAB's editor.           |
-
-**Commands**
-
-| Commands          | Description                                           |
-|------------------|-------------------------------------------------------|
+| **Command Help**              |       
 | `doc command`    | Opens the documentation for 'command'. |
 | `help command`   | Displays help text for 'command' in the Command Window. |
 | `clc`            | Clears all input and output from the Command Window, keeping history. |
 | `quit` or  `exit`| Closes MATLAB. |
-
-**Workspace Management**
-| Commands          | Description                                           |
-|------------------|-------------------------------------------------------|
+| **Managing Workspace**              |       
 | `clc`            | Clears all input and output from the Command Window, keeping history. |
 | `clear`            | Clears all input and output from the Command Window, keeping history. |
 | `quit` or  `exit`| Closes MATLAB. |
@@ -114,8 +109,6 @@ The **search path** is a subset of all the folders in the file system that MATLA
 Keyboard shortcuts in MATLAB's Command Window mirror the functionality often used in terminal environments. 
 
 Note - These shortcuts will only work if you have MATLAB installed in your system. MATLAB Online provides access to MATLAB from a standard web browser. Because MATLAB Online runs in a browser, navigation using the keyboard is slightly different.
-
-
 
 #### For Windows Users
 
@@ -170,156 +163,281 @@ This tutorial briefly reviews how to import data, customize your workspace, and 
 [Documentation: Search Path](https://www.mathworks.com/help/matlab/search-path.html?s_tid=CRUX_lftnav)
 
 
-
 # 3. MATLAB Elements and Syntax
-
-
-
-This section provides an overview of fundamental MATLAB syntax.
 
 ### 3a. Basic Elements
 
-Variable
+**Comment:** A comment in MATLAB is a piece of text in a script or function that is not executed. Comments are used to explain code and are created using the percent sign. For example, `x = 10 % This is a comment` assigns 10 to x and includes a comment. You can also write a block of comments using the block comment operators % { and % }.
 
-Array 
+**Variable:** A variable in MATLAB is a storage location identified by a name that can hold different types of data such as numbers, arrays, or strings. Variables are created by assignment statements, for example, `x = 5` creates a variable x with a value of 5. 
 
-String
+**String:** A string is a series of characters, sometimes called a character vector or character array. Strings are created using single quotes, e.g., `str = 'hello'` creates a string variable `str` with the text `hello`.
 
-Function
+**Array:** An array is a data structure in that can store values of the same type. Arrays are created using square brackets and can be one-dimensional (e.g., vectors) or multi-dimensional (e.g., matrices). 
+- **Vector:** A vector is a one-dimensional array that can hold a sequence of variables Vectors can be either row vectors or column vectors.
+  - A row vector is created by enclosing the elements in square brackets, separated by spaces or commas, e.g., 'rowVec = [1, 2, 3]' creates a 1x3 row vector.
+  - A column vector is created by enclosing the elements in square brackets, separated by semicolons, e.g., 'colVec = [1; 2; 3]' creates a 3x1 column vector.
+- **Matrix:** A matrix is a two-dimensional array of numbers arranged in rows and columns. Matrices are created using square brackets with rows separated by semicolons, e.g., `A = [1, 2, 3; 4, 5, 6]` creates a 2x3 matrix. 
+- **String Array:**: A string array is a one-dimensional or multidimensional array that holds strings. For example, `strArray = ["Hello", "World"]` creates a 1x2 string array.
 
-Comment
+**Cell:** A cell (sometimes referred to as cell array) is a data structure in MATLAB that can hold different types of data in an array format. Each element of a cell array is called a cell, and can contain different types or sizes of data. Cell arrays are created using curly braces, e.g., `C = {1, 'text', [1, 2, 3]}` creates a 
 
-Cell
-
-
-To help you identify MATLAB® elements, some entries appear in different colors in the Command Window, the Editor, and the Live Editor. By default:
+To help you identify elements, some entries appear in different colors in the Command Window and Editor. By default:
 
 - Keywords are blue.
 - Character vectors and strings are purple.
 - Unterminated character vectors are maroon.
 - Comments are green.
 
-<img width="657" alt="image" src="https://github.com/user-attachments/assets/ab3183e3-f809-4671-b5a6-3e772cf27558">
+<img width="295" alt="image" src="https://github.com/user-attachments/assets/be066590-ca88-4ac0-8d40-7ee8c90022ee">
+
 
 ### 3b. Special Characters 
 
-- **Colon `:`**
-  - Used to create vectors, specify ranges, and index arrays.
-  - Example: `1:5` generates a vector `[1, 2, 3, 4, 5]`.
-  - Used in array slicing: `A(:, 2)` selects all rows from the second column of matrix `A`.
+Below are some of the key special characters you should be familiar with, including delimiters which are what the lists of variables are enclosed by when creating arrays and cells. For detailed information about other special characters, see [MATLAB Operators and Special Characters](https://www.mathworks.com/help/matlab/matlab_prog/matlab-operators-and-special-characters.html). 
 
-- **Semicolon `;`**
-  - Suppresses the output of a command.
-  - Example: `a = 5;` assigns 5 to `a` without displaying the output.
-  - Used to separate rows in matrix definitions: `A = [1, 2; 3, 4]`.
+**Square Brackets `[]`:** 
+- A delimiter used to create arrays and matrices
+  - Example: `A = [1, 2, 3])`.
 
-- **Percent `%`**
-  - Used for comments. Everything after `%` on that line is ignored by MATLAB.
-  - Example: `x = 10; % This is a comment`.
+**Curly Braces `{}`:**
+- A delimiter used to create cells
+  - Example: `C = {1, 'text', [1, 2, 3]})`.
+- Indexing cells
+  - Example: `cellArray{index} = newValue`.
 
-- **Equal Sign `=`**
-  - Assigns a value to a variable.
-  - Example: `a = 5`.
+**Parentheses `()`:**
+- Group expressions
+  - Examples: `a = (b + c) * d)`.
+- Function arguments
+  -  Example: `result = myFunction(arg1, arg2)`.
+- Indexing arrays
+  - Example: `element = A(row, column)`.
 
-- **Decimal Point `.`**
-  - Indicates decimal numbers.
-  - Example: `3.14`.
-
-- **Comma `,`**
-  - Separates elements in arrays and function arguments.
+**Comma `,`**
+- Separates elements in arrays and function arguments.
   - Example: `[1, 2, 3]` or `plot(x, y)`.
+    
+**Colon `:`**
+- Creates vectors and specify ranges, and index arrays.
+  - Example: `1:5` generates a vector `[1, 2, 3, 4, 5]`.
+- The colon alone, without start or end values, specifies all of the elements in that dimension. 
+  - Example: `A(:, 2)` selects all rows from the second column of matrix `A`.
 
-- **Parentheses `()`**
-  - Used for grouping expressions, function arguments, and array indexing.
-  - Example: `a = (b + c) * d` or `y = myFunction(x)`.
+**Semicolon `;`**
+- Suppresses the output of a command.
+  - Example: `a = 5;` assigns 5 to `a` without displaying the output.
+- Separates rows in matrix definitions.
+  - Example: `A = [1, 2; 3, 4]`.
 
-- **Square Brackets `[]`**
-  - Used to create arrays and matrices.
-  - Example: `A = [1, 2, 3]` or `B = [1, 2; 3, 4]`.
-
-- **Curly Braces `{}`**
-  - Used for cell arrays, which can hold different types of data.
-  - Example: `C = {1, 'text', [1, 2, 3]}`.
-
-- **Single Quote `'''`**
-  - Defines a string.
-  - Example: `str = 'Hello, World!'`.
-
-- **Ellipsis `...`**
-  - Indicates that a statement continues on the next line.
+**Ellipsis `...`**
+- Indicates that a statement continues on the next line.
   - Example:
     ```matlab
     a = 1 + 2 + 3 + ...
         4 + 5 + 6;
     ```
+**Double Percent Signs `%%`**
+- Starts a code section and is typically followed by the section title
+  - Example: `%% first code section` starts a section titled `first code section` without displaying the output.
+
+### 3c. Accessing and Manipulating Elements
+
+**Indicies**: Indices are used to specify the position of the element(s) so that you can retrieve them without processing the entire dataset. This capability enables you to easily update or modify specific elements within data structures or extract relevant portions of data for analysis or visualization.
+
+For one-dimensional arrays or cells, you specify the element's position using a single index, which corresponds to the element's position in that dimension. For example:
+  
+```matlab
+rowVector = [10, 20, 30, 40, 50];
+thirdElement = rowVector(3);  % The 3 is an index for third element in the row, which is 30
+
+colVector = [10; 20; 30; 40; 50];
+fourthElement =colVector(4);  %  The 4 is an index for fourth element in the column, which is 40
+  ```
+
+For multi-dimensional arrays or cells, you specify the element's position using a pair of indices (or more for higher dimensions), which correspond to the element's row and column positions. For example:
+
+```matlab
+matrix = [1, 2, 3; 4, 5, 6; 7, 8, 9];
+element = matrix(2, 3);  % These indicies are specifying the element in the second row and third column, which is 6
+  ```
+
+**Accessing Elements**: Access element(s) with the appropriate indicies and delimiter (e.g., parantheses or cell braces).To access a subset of elements, you must specify the range using the colon `:` operator. For example:
+
+  ```matlab
+
+% Vectors
+v = [10, 20, 30, 40, 50];
+v(2);          % Accesses the second element, result is 20
+v(2:4);               % Accesses elements from the second to the fourth, result is [20, 30, 40]
+
+% Matrices
+A = [1, 2, 3; 4, 5, 6; 7, 8, 9];
+A(2,1);              % Accesses the element in the second row, first column, result is 4
+A(1:2, 2:3);          % Accesses a submatrix from rows 1 to 2 and columns 2 to 3, result is [2, 3; 5, 6]
+
+% One-dimensional String Arrays
+strArray = ["Hello", "World", "MATLAB"];
+strArray(1);    % Accesses the first element, result is "Hello"
+strArray(1:2);        % Accesses the first two elements, result is ["Hello", "World"]
+
+% Multi-dimensional String Arrays
+multiStrArray = ["Hello", "World"; "MATLAB", "Programming"];
+multiStrArray(1, 2); % Accesses the element in the first row, second column, result is "World"
+multiStrArray(1:2, 1); % Accesses the first column, result is ["Hello"; "MATLAB"]
+
+% One-dimensional Cell Arrays
+cellArray = {1, 'MATLAB', [2, 3, 4]};
+cellArray{1};   % Accesses the first element, result is 1
+cellArray{2:3};       % Accesses elements from the second to the third, result is {'MATLAB', [2, 3, 4]}
+
+% Multi-dimensional Cell Arrays
+multiCellArray = {1, 'text'; 2, 'more text'; 3, 'even more text'};
+cellArray{2, 1};   % Accesses the element in the second row, first column, result is 2
+multiCellArray{2:3, 2}; % Accesses elements from rows 2 to 3 in column 2, result is {'more text', 'even more text'}
+  ```
+
+**Modifying Elements**: Change element(s) by using the `=` to assign a new value to the corresponding index. 
+
+  ```matlab
+% Vectors
+v = [10, 20, 30, 40, 50];
+v(2) = 25;                % Modifies the second element, result is [10, 25, 30, 40, 50]
+v(2:4) = [21, 31, 41];    % Modifies elements from the second to the fourth, result is [10, 21, 31, 41, 50]
+
+% Matrices
+A = [1, 2, 3; 4, 5, 6; 7, 8, 9];
+A(2,1) = 40;              % Modifies the element in the second row, first column, result is [1, 2, 3; 40, 5, 6; 7, 8, 9]
+A(1:2, 2:3) = [20, 30; 50, 60];  % Modifies a submatrix from rows 1 to 2 and columns 2 to 3, result is [1, 20, 30; 40, 50, 60; 7, 8, 9]
+
+% One-dimensional String Arrays
+strArray = ["Hello", "World", "MATLAB"];
+strArray(1) = "Hi";       % Modifies the first element, result is ["Hi", "World", "MATLAB"]
+strArray(1:2) = ["Hey", "There"];  % Modifies the first two elements, result is ["Hey", "There", "MATLAB"]
+
+% Multi-dimensional String Arrays
+multiStrArray = ["Hello", "World"; "MATLAB", "Programming"];
+multiStrArray(1, 2) = "Everyone";  % Modifies the element in the first row, second column, result is ["Hello", "Everyone"; "MATLAB", "Programming"]
+multiStrArray(1:2, 1) = ["Hi"; "Hello"];  % Modifies the first column, result is ["Hi", "Everyone"; "Hello", "Programming"]
+
+% One-dimensional Cell Arrays
+cellArray = {1, 'MATLAB', [2, 3, 4]};
+cellArray{1} = 10;       % Modifies the first element, result is {10, 'MATLAB', [2, 3, 4]}
+cellArray{2:3} = {'Hi', [5, 6, 7]}; % Modifies elements from the second to the third, result is {10, 'Hi', [5, 6, 7]}
+
+% Multi-dimensional Cell Arrays
+multiCellArray = {1, 'text'; 2, 'more text'; 3, 'even more text'};
+multiCellArray{2, 1} = 20;   % Modifies the element in the second row, first column, result is {1, 'text'; 20, 'more text'; 3, 'even more text'}
+multiCellArray{2:3, 2} = {'new text', 'latest text'}; % Modifies elements from rows 2 to 3 in column 2, result is {1, 'text'; 20, 'new text'; 3, 'latest text'}
+  ```
+
+### 3d. Case and Space Sensitivity
+
+MATLAB is **case-sensitive**, meaning that variable and function names like `VariableName` and `variablename` are considered different.
+
+Additionally, MATLAB is *somewhat* **space-sensitive**, meaning spaces around operators, assignments, and in-function calls are mostly optional and do not affect code execution. While spaces are generally not significant in MATLAB syntax, improper placement can sometimes cause errors or affect readability. For Example:
+
+```matlab
+     % These are all equivalent
+     y = sin(x);
+     y=sin(x);
+     y = sin( x );
+
+     % Both create the same vector    
+     A = [1 2 3];
+     A = [1, 2, 3];
+
+
+     % These are also equivalent
+     result = max( a, b );
+     result=max(a,b);
+
+
+     % Each would work with or without spaces    
+     a=1; % No spaces
+     b = 2; % With spaces
+     c = 3 + 4; % With spaces around the operator
+     d=3+4; % No spaces around the operator
+```
+
+However, spaces within strings and in the definition of matrices and arrays must be used correctly. For example:
+
+ ```matlab
+     str1 = 'Hello';
+     str2 = 'Hello ';
+     isEqual = strcmp(str1, str2); % This will be false because of the trailing space in str2
+
+
+     rowVec = [1 2, 3, 4 5];  % MATLAB might not interpret this correctly due to mixed delimiters
+     rowVec = [1 2   3,4, 5];  % Might still run but is hard to read and maintain
+
+     A = [1 2 3 4 5];  % Consistent use of spaces
+     B = [1, 2, 3, 4, 5];  % Consistent use of commas
+  ```    
+
+For more information, see [Case and Space Sensitivity](https://www.mathworks.com/help/matlab/matlab_prog/case-and-space-sensitivity.html)
+
+**Code Style**: 
+
+Note that while MATLAB allows for flexible spacing, consistent use of spaces enhances code readability and maintainability. This is especially important in collaborative environments or when sharing code with others. 
+
+Adopting a consistent coding style, including the use of spaces, helps in maintaining clean and understandable code. MATLAB's [code analyzer](https://www.mathworks.com/help/matlab/matlab_prog/use-the-matlab-code-analyzer.html) provides guidelines and warnings to improve code quality, including spacing issues. 
+
+### 3e. Code Suggestions and Completions
+MATLAB offers real-time syntax checking and code suggestions. As you type in the Command Window or Editor, MATLAB will suggest function names, variable names, and other elements. MATLAB also indicates matched and mismatched delimiters (e.g., parentheses and brackets) and paired language keywords (e.g., for, if, while, else, and end statements). For more information, see [Check Syntax as You Type](https://www.mathworks.com/help/matlab/matlab_env/check-syntax-as-you-type.html).
+
+### 3f. Scripts vs Functions 
+
+**Scripts**: Scripts are collections of MATLAB commands executed exactly as if they were typed into the Command Window. They operate within the current workspace, which means they can modify any existing variables or create new ones. Scripts do not accept inputs directly (though they can work with data already in the workspace) and do not return outputs. Scripts are useful for automating a series of MATLAB commands and for writing code that does not need to be modular or reusable, like data manipulation and plotting. 
+
+**Functions**: Functions, on the other hand, are more versatile and encapsulate their code within a separate workspace. They can accept inputs and return outputs, making them essential for modular programming. Functions prevent potential conflicts with the main workspace by keeping variables local, except those explicitly returned. They are ideal for reusing code, enhancing code readability, and managing larger projects where data encapsulation is necessary.
+
+
+### 3g. Command Cheat Sheet
+
+| Command                             | Description                                           |
+|-------------------------------------|-------------------------------------------------------|
+| **Viewing Elements**               |                                                       |
+| `who`                               | Lists the names of all elements currently in the workspace. Does not display values.
+                 |
+| `whos`                              | Lists all elements in the workspace along with detailed information about each variable, such as size, bytes, class (data type), and attributes. Does not display values.        |
+| `disp(element)`                    | Displays the value of the specified element.         |
+| **Deleting Elements**               |     
+| `clear element`                | Deletes the specified element from the workspace.    |
+| `clear all`                         | Deletes all elements from the workspace.             |
+| `clearvars varName1 varName2`       | Deletes specific element from the workspace.        |
+| `clearvars -except varName1 var2`   | Deletes all elements from the workspace except the specified ones.      |
+| **Inspecting Elements**            |                                  
+| `size(element)`                | Returns the dimensions of an array.                     |
+| `length(element)`              | Returns the length of the largest array dimension.    |
+| `class(element)`               | Returns the class of the element.               |
+
+### 3h. Suggested Tutorials
+
+[Tutorial: Creating and Manipulating Arrays](https://matlabacademy.mathworks.com/details/matlab-fundamentals/mlbe#module=3)
+
+[Tutorial: Accessing Data in Arrays](https://matlabacademy.mathworks.com/details/matlab-fundamentals/mlbe#module=4)
+
+
+### Supplemental Materials 
+
+[Cheat Sheet: Example of Code Syntax and Formatting](https://learnxinyminutes.com/docs/matlab/)
+
+[Live Demo: Basic Syntax](https://www.tutorialspoint.com/matlab/matlab_syntax.htm)
+
+[Live Demo: Variables Overview](https://www.tutorialspoint.com/matlab/matlab_variables.htm)
+
+[Live Demo: Colon Notation](https://www.tutorialspoint.com/matlab/matlab_colon_notation.htm)
+
+[Live Demo: Matrices](https://www.tutorialspoint.com/matlab/matlab_matrics.htm)
+
+[Documentation: Matrices and Arrays](https://www.mathworks.com/help/matlab/matrices-and-arrays.html?s_tid=CRUX_lftnav)
+
+[Documentation: Creating Scripts](https://www.mathworks.com/help/matlab/matlab_prog/create-scripts.html)
 
 
 
-### 3e. Code Suggestions and Completions**
-MATLAB offers real-time syntax checking and code suggestions. As you type in the Command Window, Editor, Live Editor, or App Designer, MATLAB suggests function names, variable names, and other elements. MATLAB also indicates matched and mismatched delimiters (e.g., parentheses and brackets) and paired language keywords (e.g., for, if, while, else, and end statements).For more information, see [Check Syntax as You Type](https://www.mathworks.com/help/matlab/matlab_env/check-syntax-as-you-type.html).
-
-
-
-# 4. Working with Variables in MATLAB
-
-This section provides an overview of how to handle variables in MATLAB, including how to create, manipulate, and delete them, as well as working with vectors and matrices.
-
-### Creating Variables
-
-Variables in MATLAB are created simply by assigning values to them. MATLAB does not require explicit declaration of variable types.
-
-| Command             | Description                                           |
-|---------------------|-------------------------------------------------------|
-| `x = 5;`            | Creates a variable `x` and assigns it the value `5`.  |
-| `name = 'MATLAB';`  | Creates a string variable `name` with the text `MATLAB`. |
-
-#### Working with Vectors
-
-Vectors are a fundamental data structure in MATLAB used to store lists of numbers.
-
-| Command             | Description                                           |
-|---------------------|-------------------------------------------------------|
-| `v = [1, 2, 3];`    | Creates a row vector `v` with elements 1, 2, and 3.   |
-| `w = [1; 2; 3];`    | Creates a column vector `w` with elements 1, 2, and 3.|
-| `length(v);`        | Returns the number of elements in vector `v`.         |
-| `v(2);`             | Accesses the second element of vector `v`.            |
-| `v(1:2);`           | Accesses the first and second elements of vector `v`. |
-
-#### Working with Matrices
-
-Matrices are two-dimensional arrays of numbers. MATLAB is specifically designed to work efficiently with matrices.
-
-| Command             | Description                                           |
-|---------------------|-------------------------------------------------------|
-| `A = [1, 2; 3, 4];` | Creates a 2x2 matrix `A`.                             |
-| `B = zeros(3,3);`   | Creates a 3x3 matrix `B` filled with zeros.           |
-| `C = ones(2,4);`    | Creates a 2x4 matrix `C` filled with ones.            |
-| `D = eye(3);`       | Creates a 3x3 identity matrix `D`.                    |
-| `size(A);`          | Returns the size of matrix `A`.                       |
-| `A(2,1);`           | Accesses the element in the second row, first column of `A`. |
-| `A(:,2);`           | Accesses all elements in the second column of `A`.    |
-| `A(1,:);`           | Accesses all elements in the first row of `A`.        |
-
-Cell
-A cell array is a data type in MATLAB that can hold different types of data in an array format. Each element of a cell array is called a cell, and can contain different types or sizes of data. Cell arrays are created using curly braces, e.g., C = {1, 'text', [1, 2, 3]}.
-
-
-
-#### Manipulating Variables
-
-Once variables are created, they can be manipulated using MATLAB's built-in functions and operators.
-
-| Command             | Description                                           |
-|---------------------|-------------------------------------------------------|
-| `v = [1, 2, 3];`    | Creates a row vector `v` with elements 1, 2, and 3.   |
-| `w = v + 1;`        | Adds `1` to each element of vector `v`.               |
-| `u = sum(v);`       | Sums the elements of `v` and stores the result in `u`.|
-| `mean(v);`          | Calculates the mean of vector `v`.                    |
-| `A = A + 2;`        | Adds `2` to each element of matrix `A`.               |
-| `A * 2;`            | Multiplies each element of matrix `A` by `2`.         |
-| `A * B;`            | Performs matrix multiplication of `A` and `B`.        |
-| `A .* B;`           | Performs element-wise multiplication of `A` and `B`.  |
-
+# 4. Data
 
 ### Relational Operators
 
@@ -341,37 +459,11 @@ Once variables are created, they can be manipulated using MATLAB's built-in func
 | `~`      | Logical NOT         | `~a`          |
 | `xor`    | Logical EXCLUSIVE OR| `xor(a, b)`   |
 
-
-#### Deleting Variables
-
-To free up resources or clear workspace, you can delete variables that are no longer needed.
-
-| Command             | Description                                           |
-|---------------------|-------------------------------------------------------|
-| `clear x;`          | Deletes the variable `x` from the workspace.          |
-| `clear x y z;`      | Deletes multiple variables `x`, `y`, and `z`.         |
-| `clear all;`        | Clears all variables from the workspace.              |
-
-#### Viewing Variables
-
-To view the variables currently stored in your workspace, you can use the Workspace window or specific commands.
-
-| Command             | Description                                           |
-|---------------------|-------------------------------------------------------|
-| `who;`              | Lists all variables in the workspace.                 |
-| `whos;`             | Lists all variables with detailed information including size, bytes, and class. |
-
-### Case and Space Sensitivity
-MATLAB is case-sensitive and space-sensitive. This means that variable and function names like **VariableName** and **variablename** are considered different. 
-
-
 # 5. File Types
 
 ### MATLAB File Types:
 
-- **.m files**: MATLAB script and function files, each serving different purposes:
-  - **Script Files**: Scripts are collections of MATLAB commands executed exactly as if they were typed into the Command Window. They operate within the current workspace, which means they can modify any existing variables or create new ones. Scripts do not accept inputs directly (though they can work with data already in the workspace) and do not return outputs. They are useful for straightforward tasks like data manipulation and plotting when you do not need to isolate code.
-  - **Function Files**: Functions, on the other hand, are more versatile and encapsulate their code within a separate workspace. They can accept inputs and return outputs, making them essential for modular programming. Functions prevent potential conflicts with the main workspace by keeping variables local, except those explicitly returned. They are ideal for reusing code, enhancing code readability, and managing larger projects where data encapsulation is necessary.
+- **.m files**: MATLAB script and function files.
 
 - **.mlx files**: MATLAB live script files that combine code execution with narrative, formatted text, equations, images, and hyperlinks in a single, interactive document. Ideal for instructional purposes, interactive applications, and sharing results.
 
