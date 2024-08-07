@@ -47,19 +47,28 @@ MATLAB offers flexible customization options to optimize your workflow. Some way
 For more advanced customizations, navigate to **Preferences** under the Home tab.
 <img width="1000" alt="image" src="https://github.com/user-attachments/assets/cdc7c230-c22d-41e6-917a-ec8468bc5eeb">
 
+[Documentation: Set Command Window Preferences](https://www.mathworks.com/help/matlab/matlab_env/command-window-preferences.html)
+ 
 
-### Directories:
+### Search Path and Directories:
 
-MATLAB organizes folders and files using a directory tree, starting with the root directory (/). 
+A **directory** is a location in the file system that can contain files and other directories (subdirectories). It's essentially a folder where files and other folders are organized.
 
-- **Absolute Path:** Specifies the entire path from the root directory. E.g., `ls /Users/your-username`
-  
-- **Relative Path:** Specifies the path relative to the current directory. E.g., `cd Desktop`
+MATLAB organizes folders and files using a directory tree, starting with the root directory (`/`).
 
+A **path** is a string that specifies the location of a file or directory in the file system. It can be an absolute path (starting from the root of the file system) or a relative path (relative to the current directory)
+
+- **Absolute Path:** Specifies the entire path from the root directory. E.g., `/home/user/Documents/file.txt`
+- **Relative Path:** Specifies the path relative to the current directory. E.g., `Documents/file.txt` if the current directory is /home/user.
+
+The **search path** is a subset of all the folders in the file system that MATLAB uses to locate files efficiently. The order of folders on the search path is significant: MATLAB uses the file in the folder nearest to the top when multiple files with the same name exist. For more information, see [What Is the MATLAB Search Path?](https://www.mathworks.com/help/matlab/matlab_env/what-is-the-matlab-search-path.html).
+
+[Documentation: Search Path](https://www.mathworks.com/help/matlab/search-path.html?s_tid=CRUX_lftnav)
 
 ### Commands for Navigating Workspace
 
-| Command          | Description                                           |
+**Directories and Paths**
+| Commands          | Description                                           |
 |------------------|-------------------------------------------------------|
 | `pwd`            | Prints the current working directory path. |
 | `cd 'folder'`    | Changes the current working directory to 'folder'. |
@@ -68,16 +77,31 @@ MATLAB organizes folders and files using a directory tree, starting with the roo
 | `cd ..`          | Moves up one level in the directory tree. |
 | `ls`             | Lists all files and directories in the current directory. |
 | `dir`            | Lists directory contents, similar to `ls`. |
-| `exist 'name'`   | Checks if a variable, file, or folder 'name' exists. |
+| `what`           | Lists all MATLAB specific files in the current directory. |
 | `mkdir 'dirname'`| Creates a new directory named 'dirname'. |
 | `rmdir 'dirname'`| Removes the directory named 'dirname', if it is empty. |
+| `path`           | Displays the current MATLAB search path. |
+| `addpath 'folder'`| Adds the specified folder to the MATLAB search path. |
+| `rmpath 'folder'`| Removes the specified folder from the MATLAB search path. |
+| `savepath`       | Saves the current MATLAB search path for future sessions. |
+
+**Files**
+| Commands          | Description                                           |
+|------------------|-------------------------------------------------------|
+| `exist 'name'`   | Checks if a variable, file, or folder 'name' exists. |
+| `load 'filename'`| Loads variables from a file into the workspace. |
+| `save 'filename'`| Saves workspace variables to a file. |
+| `type 'filename'`| Displays the contents of the specified file. |
+| `which 'filename'`   | Returns the full path if the file is on the search path.           |
 | `edit 'filename'`   | Opens the specified file in MATLAB's editor.           |
-| `edit functionName` | Opens the function in MATLAB's editor   |
+
+**Commands**
+| Commands          | Description                                           |
+|------------------|-------------------------------------------------------|
 | `doc command`    | Opens the documentation for 'command'. |
 | `help command`   | Displays help text for 'command' in the Command Window. |
 | `clc`            | Clears all input and output from the Command Window, keeping history. |
 | `quit` or  `exit`| Closes MATLAB. |
-
 
 
 ### Keyboard Shortcuts for MATLAB Command Window
@@ -123,42 +147,6 @@ Note - These shortcuts will only work if you have MATLAB installed in your syste
 | `Cmd + K`         | Clears the screen, keeping the history intact. |
 | `Esc`             | Cancels the current command line input without executing it. |
 | `Ctrl + C`         | Interrupts the execution of the current command or script. |
-
-
-### MATLAB File Types:
-
-- **.m files**: MATLAB script and function files, each serving different purposes:
-  - **Script Files**: Scripts are collections of MATLAB commands executed exactly as if they were typed into the Command Window. They operate within the current workspace, which means they can modify any existing variables or create new ones. Scripts do not accept inputs directly (though they can work with data already in the workspace) and do not return outputs. They are useful for straightforward tasks like data manipulation and plotting when you do not need to isolate code.
-  - **Function Files**: Functions, on the other hand, are more versatile and encapsulate their code within a separate workspace. They can accept inputs and return outputs, making them essential for modular programming. Functions prevent potential conflicts with the main workspace by keeping variables local, except those explicitly returned. They are ideal for reusing code, enhancing code readability, and managing larger projects where data encapsulation is necessary.
-
-- **.mlx files**: MATLAB live script files that combine code execution with narrative, formatted text, equations, images, and hyperlinks in a single, interactive document. Ideal for instructional purposes, interactive applications, and sharing results.
-
-- **.mat files**: Binary files that store workspace variables. Useful for saving your session data and transferring variables between sessions without losing integrity.
-
-- **.fig files**: Figure files that save MATLAB graphical outputs. They enable you to reopen and modify figures later, preserving the graphical data and properties exactly as saved.
-
-
-### Importing and Exporting Files
-
-MATLAB supports importing various data formats such as TXT, CSV, XLS, XLSX, JPG, PNG, etc. You can find additional documentation including functions and examples [here](https://www.mathworks.com/help/matlab/import_export/supported-file-formats-for-import-and-export.html).
-
-
-### Commands for Handling Files
-| Command                      | Description                                           |
-|------------------------------|-------------------------------------------------------|
-| `save 'filename'`            | Saves workspace variables to a file.                  |
-| `load 'filename'`            | Loads variables from a file into the workspace.       |
-| `readtable('filename')`      | Imports data from a file into a table, supporting CSV, TXT, and Excel formats. |
-| `readmatrix('filename')`     | Reads numerical data from a file into a matrix, ideal for straightforward data formats. |
-| `xlsread('filename')`        | Imports data from Excel files, useful for datasets in spreadsheets. |
-| `csvread('filename')`        | Reads numerical data from CSV files directly into an array. |
-| `fopen('filename')`          | Opens a file for reading or writing, necessary for file manipulation. |
-| `fwrite(fid, data)`          | Writes binary data to the file specified by `fid`.    |
-| `fprintf(fid, format, data)` | Writes formatted data to the file, allowing for customizable text outputs. |
-| `fclose(fid)`                | Closes an open file to free up resources.             |
-| `importdata('filename')`     | Loads mixed data from files, handling various formats automatically. |
-| `exportdata('data', 'filename')` | Exports data to a file in chosen formats, useful for sharing or external use. |
-
 
 
 ### Suggested Tutorials for Workspace Basics
@@ -322,6 +310,46 @@ To view the variables currently stored in your workspace, you can use the Worksp
 |---------------------|-------------------------------------------------------|
 | `who;`              | Lists all variables in the workspace.                 |
 | `whos;`             | Lists all variables with detailed information including size, bytes, and class. |
+
+
+
+# 5. File Types
+
+### MATLAB File Types:
+
+- **.m files**: MATLAB script and function files, each serving different purposes:
+  - **Script Files**: Scripts are collections of MATLAB commands executed exactly as if they were typed into the Command Window. They operate within the current workspace, which means they can modify any existing variables or create new ones. Scripts do not accept inputs directly (though they can work with data already in the workspace) and do not return outputs. They are useful for straightforward tasks like data manipulation and plotting when you do not need to isolate code.
+  - **Function Files**: Functions, on the other hand, are more versatile and encapsulate their code within a separate workspace. They can accept inputs and return outputs, making them essential for modular programming. Functions prevent potential conflicts with the main workspace by keeping variables local, except those explicitly returned. They are ideal for reusing code, enhancing code readability, and managing larger projects where data encapsulation is necessary.
+
+- **.mlx files**: MATLAB live script files that combine code execution with narrative, formatted text, equations, images, and hyperlinks in a single, interactive document. Ideal for instructional purposes, interactive applications, and sharing results.
+
+- **.mat files**: Binary files that store workspace variables. Useful for saving your session data and transferring variables between sessions without losing integrity.
+
+- **.fig files**: Figure files that save MATLAB graphical outputs. They enable you to reopen and modify figures later, preserving the graphical data and properties exactly as saved.
+
+
+### Importing and Exporting Files
+
+MATLAB supports importing various data formats such as TXT, CSV, XLS, XLSX, JPG, PNG, etc. You can find additional documentation including functions and examples [here](https://www.mathworks.com/help/matlab/import_export/supported-file-formats-for-import-and-export.html).
+
+
+### Commands for Handling Files
+| Command                      | Description                                           |
+|------------------------------|-------------------------------------------------------|
+| `save 'filename'`            | Saves workspace variables to a file.                  |
+| `load 'filename'`            | Loads variables from a file into the workspace.       |
+| `readtable('filename')`      | Imports data from a file into a table, supporting CSV, TXT, and Excel formats. |
+| `readmatrix('filename')`     | Reads numerical data from a file into a matrix, ideal for straightforward data formats. |
+| `xlsread('filename')`        | Imports data from Excel files, useful for datasets in spreadsheets. |
+| `csvread('filename')`        | Reads numerical data from CSV files directly into an array. |
+| `fopen('filename')`          | Opens a file for reading or writing, necessary for file manipulation. |
+| `fwrite(fid, data)`          | Writes binary data to the file specified by `fid`.    |
+| `fprintf(fid, format, data)` | Writes formatted data to the file, allowing for customizable text outputs. |
+| `fclose(fid)`                | Closes an open file to free up resources.             |
+| `importdata('filename')`     | Loads mixed data from files, handling various formats automatically. |
+| `exportdata('data', 'filename')` | Exports data to a file in chosen formats, useful for sharing or external use. |
+
+
 
 
 
