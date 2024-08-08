@@ -835,9 +835,9 @@ assert(x > 0, 'x must be positive');
 
 [Tutorial: Increasing Automation with Functions](https://matlabacademy.mathworks.com/details/matlab-fundamentals/mlbe#module=15)
 
-[Tutorial: Troubleshooting Code A](https://matlabacademy.mathworks.com/details/matlab-fundamentals/mlbe#module=16)
+[Tutorial: Troubleshooting Code A](https://matlabacademy.mathworks.com/details/matlab-desktop-tools-and-troubleshooting-scripts/otmldts#module=4)
 
-[Tutorial: Troubleshooting Code B](https://matlabacademy.mathworks.com/details/matlab-desktop-tools-and-troubleshooting-scripts/otmldts#module=4)
+[Tutorial: Troubleshooting Code B](https://matlabacademy.mathworks.com/details/matlab-fundamentals/mlbe#module=16)
 
 [Course: Debugging and Error Handling](https://matlabacademy.mathworks.com/details/debugging-and-error-handling/otmldeh)
 
@@ -876,19 +876,4 @@ assert(x > 0, 'x must be positive');
 [Andy's Brain Book: Paths and Functions](https://andysbrainbook.readthedocs.io/en/latest/Matlab/Matlab_03_FunctionsPaths.html#functions)
 
 [Andy's Brain Book: Control Structures](https://andysbrainbook.readthedocs.io/en/latest/Matlab/Matlab_04_ControlStructures.html)
-
-
-
-# Troubleshooting and Debugging
-
-
-Error Handling: Implement error handling using try...catch blocks to manage unexpected situations gracefully.
-
-
-
-## ADDITIONAL RESOURCES FOR MATLAB
-MATLAB Desktop – Importing Data, Customizing the MATLAB Desktop, and Setting Preferences from MathWorks Self-Paced Online Courses: MATLAB Desktop Tools and Troubleshooting Scripts Course
-
-[Tutorial Link](https://matlabacademy.mathworks.com/details/matlab-desktop-tools-and-troubleshooting-scripts/otmldts)
-https://github.com/mikexcohen/EssentialsOfNeuroscienceWithMATLAB/blob/main/module4_FMRI/README.md 
 
