@@ -424,7 +424,7 @@ MATLAB offers real-time syntax checking and code suggestions. As you type in the
 [Tutorial: Accessing Data in Arrays](https://matlabacademy.mathworks.com/details/matlab-fundamentals/mlbe#module=4)
 
 
-### Supplemental Materials 
+### 3i. Supplemental Materials 
 
 [Cheat Sheet: Example of Code Syntax and Formatting](https://learnxinyminutes.com/docs/matlab/)
 
@@ -783,7 +783,7 @@ assert(x > 0, 'x must be positive');
 2. **Unit Testing**: Write unit tests for your functions to automatically verify their correctness.
 3. **Code Review**: Have your code reviewed by peers to catch errors you might have missed.
 
-### 6e. Command Cheat Sheeet
+### 6e. Command Cheat Sheet
 
 | Command        | Description                                             |
 |----------------|---------------------------------------------------------|
