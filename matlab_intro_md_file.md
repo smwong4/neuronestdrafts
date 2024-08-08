@@ -436,6 +436,8 @@ MATLAB offers real-time syntax checking and code suggestions. As you type in the
 
 [Live Demo: Matrices](https://www.tutorialspoint.com/matlab/matlab_matrics.htm)
 
+[Live Demo: Scripts](https://www.tutorialspoint.com/matlab/matlab_m_files.htm)
+
 [Documentation: Matrices and Arrays](https://www.mathworks.com/help/matlab/matrices-and-arrays.html?s_tid=CRUX_lftnav)
 
 [Documentation: Creating Scripts](https://www.mathworks.com/help/matlab/matlab_prog/create-scripts.html)
@@ -542,12 +544,9 @@ Data types (also referred to as classes) define the kind of data a variable can 
 [Andy's Brain Book: Variables and Structures](https://andysbrainbook.readthedocs.io/en/latest/Matlab/Matlab_02_VariablesStructures.html)
 
 
-
-
-
 # 5. File Types
 
-### MATLAB File Types:
+### 5a. MATLAB File Types:
 
 - **.m files**: MATLAB script and function files.
 
@@ -558,12 +557,12 @@ Data types (also referred to as classes) define the kind of data a variable can 
 - **.fig files**: Figure files that save MATLAB graphical outputs. They enable you to reopen and modify figures later, preserving the graphical data and properties exactly as saved.
 
 
-### Importing and Exporting Files
+### 5b. Importing and Exporting Files
 
-MATLAB supports importing various data formats such as TXT, CSV, XLS, XLSX, JPG, PNG, etc. You can find additional documentation including functions and examples [here](https://www.mathworks.com/help/matlab/import_export/supported-file-formats-for-import-and-export.html).
+MATLAB supports importing and exporting various data formats such as TXT, CSV, XLS, XLSX, JPG, PNG, etc. You can find additional documentation including functions and examples [here](https://www.mathworks.com/help/matlab/import_export/supported-file-formats-for-import-and-export.html).
 
 
-### Commands for Handling Files
+### 5c. Commands for Handling Files
 | Command                      | Description                                           |
 |------------------------------|-------------------------------------------------------|
 | `save 'filename'`            | Saves workspace variables to a file.                  |
@@ -579,10 +578,31 @@ MATLAB supports importing various data formats such as TXT, CSV, XLS, XLSX, JPG,
 | `importdata('filename')`     | Loads mixed data from files, handling various formats automatically. |
 | `exportdata('data', 'filename')` | Exports data to a file in chosen formats, useful for sharing or external use. |
 
+### 5d. Suggested Tutorials
+
+[Gettting Data Into MATLAB lesson:](https://matlabacademy.mathworks.com/details/matlab-fundamentals/mlbe#module=2)
+
+[M Files](https://www.tutorialspoint.com/matlab_m_files/index.htm)
 
 
+### 5e. Supplemental Materials 
+
+[Live Demo: Data Import](https://www.tutorialspoint.com/matlab/matlab_data_import.htm)
+
+[Live Demo: Data Output] (https://www.tutorialspoint.com/matlab/matlab_data_import.htm)
+
+[Quick Guide: M Files](https://tutorialspoint.com/matlab_m_files/matlab_m_files_quick_guide.htm )
+
+[Documentation: Supported File Formats](https://www.mathworks.com/help/matlab/import_export/supported-file-formats-for-import-and-export.html)
+
+[Documentation: Spreadsheets](https://www.mathworks.com/help/matlab/spreadsheets.html?)s_tid=CRUX_lftnav
+
+[Documentation: Data Import and Export](https://www.mathworks.com/help/matlab/data-import-and-export.html)
+
+[Documentation: File Operations](https://www.mathworks.com/help/matlab/file-operations.html)
 
 
+[Documentation: Cloud File Storage](https://www.mathworks.com/help/matlab/cloud-file-storage.html)
 
 
 ## ADDITIONAL RESOURCES FOR MATLAB
