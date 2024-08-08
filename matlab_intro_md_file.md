@@ -608,7 +608,7 @@ MATLAB supports importing and exporting various data formats such as TXT, CSV, X
 [Documentation: Cloud File Storage](https://www.mathworks.com/help/matlab/cloud-file-storage.html)
 
 
-# 6. Scripts and Functions
+# 6. Functions
 
 ### 6a. Structuring Code
 
@@ -625,9 +625,38 @@ Structuring your MATLAB code efficiently is crucial for readability, maintainabi
 5. **Avoid Magic Numbers**: Use named constants instead of hard-coding numbers in your code. This improves readability and makes your code easier to update.
 
 
-### 6b. Loops and Conditional Statements
+### 6b. Functions
 
-Loops and conditional statements are fundamental constructs in programming that control the flow of execution based on conditions.
+Functions allow you to encapsulate code into reusable blocks, improving code organization and reducing redundancy. In MATLAB, functions can be defined within a script or in a separate function file.
+
+- **Defining a Function**: A function starts with the `function` keyword, followed by the output variables, the function name, and the input variables. When defining functions at the within a script file, each function must be terminated with 'end'. The use of 'end' is optional if the function is the only function in that file.
+
+
+```matlab
+function output = myFunction(input1, input2)
+    % Function code goes here
+    output = input1 + input2;
+end
+```
+
+- **Calling a Function**: You can call a function by using its name and passing the required arguments.
+
+```matlab
+result = myFunction(5, 3);
+```
+
+- **Multiple Outputs**: Functions can return multiple outputs.
+  
+```matlab
+function [out1, out2] = myFunction(input1, input2)
+    out1 = input1 + input2;
+    out2 = input1 * input2;
+end
+```
+
+### 6c. Loops and Conditional Statements
+
+Loops and conditional statements are fundamental constructs in programming that control the flow of execution based on conditions. You can use loops and conditional statements in scripts, command windows, or within functions. The the 'end' keyword to mark the conclusion of the loop or conditional statement.
 
 - **For Loop**: Repeats a group of statements a fixed, predetermined number of times.
 
@@ -671,18 +700,131 @@ end
         disp('Otherwise case');
 end
 ```
-### 6c. Functions
 
-Functions allow you to encapsulate code into reusable blocks, improving code organization and reducing redundancy. In MATLAB, functions can be defined in separate files or within scripts.
+### 6d. Troubleshooting and Debugging
 
-- **Defining a Function**: A function starts with the `function` keyword, followed by the output variables, the function name, and the input variables.
+Identifying and resolving errors quickly can save a significant amount of time and ensure your code runs smoothly. Here are some tips and tools for troubleshooting and debugging in MATLAB:
 
-- **Calling a Function**: You can call a function by using its name and passing the required arguments.
+#### Common Errors
 
-- **Multiple Outputs**: Functions can return multiple outputs.
+1. **Syntax Errors**: These occur when the MATLAB interpreter encounters code that does not conform to the syntax rules of the language. These are often caught immediately when the code is run.
+  - Example: Missing end statement in loops or conditional blocks.
+   
+3. **Runtime Errors**: These occur during the execution of the program and are typically due to invalid operations or data.
+   - Example: Division by zero, accessing an element out of array bounds.
+     
+4. **Logical Errors**: These occur when the code runs without any syntax or runtime errors, but the output is not as expected. These require careful inspection of the code logic.
+  - Example: Incorrect implementation of an algorithm.
 
 
-### 6d. Suggested Tutorials
+#### Debugging Tools and Techniques
+
+**MATLAB Debugger**
+
+MATLAB provides a built-in debugger to help you find and fix errors in your code. You can use the debugger to set breakpoints, step through code, inspect variables, and evaluate expressions.
+
+- **Setting Breakpoints**: Set breakpoints at lines where you want execution to pause so you can inspect the state of your program.
+
+- **Stepping Through Code**: Use the step commands to execute your code one line at a time.
+
+- **Inspecting Variables**: Check the values of variables at different points in your code to ensure they contain the expected values.
+
+- **Continuing Execution**: Continue running your code until the next breakpoint or end of the script.
+
+- **Quitting Debug Mode**: Exit debug mode when you are finished debugging.
+
+```matlab
+% Example: MATLAB Debugger Usage
+
+% Set a breakpoint at line 10 in myFunction
+dbstop in myFunction at 10
+
+% Step to the next line of code
+dbstep
+
+% Display the value of a variable
+disp(myVar)
+
+% Continue execution until the next breakpoint
+dbcont
+
+% Exit debug mode
+dbquit
+```
+
+**Error Handling**
+
+**Try-Catch Blocks**: Use `try-catch` blocks to catch and handle errors.
+
+```matlab
+try
+    % Code that might cause an error
+catch ME
+    % Code to handle the error
+    disp(ME.message);
+end
+```
+
+**Diagnostic Functions**
+
+- **disp() and fprintf()**: Use these functions to print variable values and messages to the Command Window for tracking the flow of your program.
+
+- **assert()**: Use assertions to check for conditions that must be true at certain points in your program.
+
+```matlab
+disp('Debugging message');
+fprintf('The value of x is: %d\n', x);
+assert(x > 0, 'x must be positive');
+```
+
+#### Best Practices
+
+1. **Incremental Development**: Develop your code in small, testable increments. Test each increment thoroughly before adding more functionality.
+2. **Unit Testing**: Write unit tests for your functions to automatically verify their correctness.
+3. **Code Review**: Have your code reviewed by peers to catch errors you might have missed.
+
+### 6e. Command Cheat Sheeet
+
+| Command        | Description                                             |
+|----------------|---------------------------------------------------------|
+| **Loops and Conditionals**      |
+| `for`          | Starts a for loop                                       |
+| `while`        | Starts a while loop                                     |
+| `if`           | Starts an if statement                                  |
+| `elseif`       | Adds an else-if branch to an if statement               |
+| `else`         | Adds an else branch to an if statement                  |
+| `switch`       | Starts a switch statement                               |
+| `case`         | Defines a case within a switch statement                |
+| `otherwise`    | Defines the default case within a switch statement      |
+| `break`        | Exits a for or while loop prematurely                   |
+| `continue`     | Skips the remaining code in a loop iteration            |
+| **Functions**      |
+
+| `function`     | Defines a new function                                  |
+| `end`          | Ends a function or control flow statement               |
+| `nargin`       | Returns the number of function input arguments          |
+| `nargout`      | Returns the number of function output arguments         |
+| `varargin`     | Allows a variable number of input arguments             |
+| `varargout`    | Allows a variable number of output arguments            |
+| `inputname`    | Returns the name of an input argument as a string       |
+| `return`       | Exits a function                                        |
+| **Troubleshooting**      |
+| `dbstop`       | Sets a breakpoint                                       |
+| `dbclear`      | Clears breakpoints                                      |
+| `dbstep`       | Executes the next line or steps into a function         |
+| `dbcont`       | Continues execution until the next breakpoint           |
+| `dbquit`       | Exits debug mode                                        |
+| `disp`         | Displays the value of a variable                        |
+| `fprintf`      | Prints formatted data to the Command Window             |
+| `assert`       | Throws an error if a condition is not met               |
+| `try...catch`  | Executes code and catches errors                        |
+| `error`        | Throws an error and displays a message                  |
+| `warning`      | Displays a warning message                              |
+| `lastwarn`     | Retrieves the last warning message                      |
+| `lasterr`      | Retrieves the last error message                        |
+| `which`        | Identifies the path of a function or file               |
+
+### 6f. Suggested Tutorials
 
 [Lesson: Creating Informative Scripts](https://matlabacademy.mathworks.com/details/matlab-fundamentals/mlbe#module=2)
 
@@ -694,10 +836,27 @@ Functions allow you to encapsulate code into reusable blocks, improving code org
 
 [Tutorial: Increasing Automation with Functions](https://matlabacademy.mathworks.com/details/matlab-fundamentals/mlbe#module=15)
 
+[Tutorial: Troubleshooting Code A](https://matlabacademy.mathworks.com/details/matlab-fundamentals/mlbe#module=16)
 
-### 6e. Supplemental Materials
+[Tutorial: Troubleshooting Code B](https://matlabacademy.mathworks.com/details/matlab-desktop-tools-and-troubleshooting-scripts/otmldts#module=4)
 
-[Video: Creating For Looops](https://www.youtube.com/watch?v=Abgbu32XOh4&list=PLn0OLiymPak2HkkG-NToKdP7ye7NlpC8D&index=7) 
+[Course: Debugging and Error Handling](https://matlabacademy.mathworks.com/details/debugging-and-error-handling/otmldeh)
+
+[Course: The Why and How of Writing Functions](https://matlabacademy.mathworks.com/details/the-how-and-why-of-writing-functions/otmlhwf)
+
+[Course: Make Your Functions User Friendly](https://matlabacademy.mathworks.com/details/make-your-functions-user-friendly/otmlfuf)
+
+### 6g. Supplemental Materials
+
+[Video: What are Functions in Matlab](https://www.mathworks.com/support/search.html/videos/managing-code-in-matlab-functions-97215.html?fq%5B%5D=asset_type_name:video&fq%5B%5D=category:matlab/programming-and-data-types&page=1)
+
+[Video: Creating Functions in MATLAB](https://www.youtube.com/watch?v=YTQI5hIl_r4&list=PLn0OLiymPak2HkkG-NToKdP7ye7NlpC8D&index=6)
+
+[Video: Creating For Loops](https://www.youtube.com/watch?v=Abgbu32XOh4&list=PLn0OLiymPak2HkkG-NToKdP7ye7NlpC8D&index=7) 
+
+[Video: Stepping Into Functions](https://www.youtube.com/watch?v=aYfB4bI-9i8&list=PLn0OLiymPak2HkkG-NToKdP7ye7NlpC8D&index=9)
+
+[Video: Common Programming Errors and their Solution](https://www.youtube.com/watch?v=_AnsdD5QNPE&list=PLn0OLiymPak2HkkG-NToKdP7ye7NlpC8D&index=10)
 
 [Live Demo: Loops](https://tutorialspoint.com/matlab/matlab_loops.htm)
 
@@ -709,7 +868,17 @@ Functions allow you to encapsulate code into reusable blocks, improving code org
 
 [Documentation: Loops and Conditional Statements](https://www.mathworks.com/help/matlab/control-flow.html)
 
+[Documentation: Exception Handling](https://www.mathworks.com/help/matlab/exception-handling.html)
+
+[Documentation: Live Scripts and Functions](https://www.mathworks.com/help/matlab/live-scripts-and-functions.html)
+
+[Documentation: Error Handling](https://www.mathworks.com/help/matlab/error-handling.html?s_tid=CRUX_lftnav)
+
+[Andy's Brain Book: Paths and Functions](https://andysbrainbook.readthedocs.io/en/latest/Matlab/Matlab_03_FunctionsPaths.html#functions)
+
 [Andy's Brain Book: Control Structures](https://andysbrainbook.readthedocs.io/en/latest/Matlab/Matlab_04_ControlStructures.html)
+
+
 
 # Troubleshooting and Debugging
 
@@ -717,9 +886,6 @@ Functions allow you to encapsulate code into reusable blocks, improving code org
 Error Handling: Implement error handling using try...catch blocks to manage unexpected situations gracefully.
 
 
-[Tutorial: Troubleshooting Code](https://matlabacademy.mathworks.com/details/matlab-fundamentals/mlbe#module=16)
-
-[Documentation: Error Handling](https://www.mathworks.com/help/matlab/error-handling.html?s_tid=CRUX_lftnav)
 
 ## ADDITIONAL RESOURCES FOR MATLAB
 MATLAB Desktop – Importing Data, Customizing the MATLAB Desktop, and Setting Preferences from MathWorks Self-Paced Online Courses: MATLAB Desktop Tools and Troubleshooting Scripts Course
