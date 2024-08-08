@@ -1,4 +1,4 @@
-# 1. What is MATLAB?
+## 1. What is MATLAB?
 
 MATLAB is a programming language and an interactive environment utilized by researchers for versatile reasons. While MATLAB has a graphical interface with point and click on icons to run commands ("MATLAB Desktop"), MATLAB primarily operates through a command line interface. 
 
@@ -16,7 +16,7 @@ This resource will focus on the basics of MATLAB to develop the skills necessary
 
 [MATLAB in Neuroimaging Oveview](https://www.youtube.com/watch?v=0cft-tyRj4o)
 
-# 2. Workspace Basics
+## 2. Workspace Basics
 
 You can access MATLAB directly from your local computer (suggested) or from a standard web browser with MATLAB Online. To access MATLAB you must have a MathWorks Account and a MATLAB license (usually obtained through your university).
 
@@ -163,7 +163,7 @@ This tutorial briefly reviews how to import data, customize your workspace, and 
 [Documentation: Search Path](https://www.mathworks.com/help/matlab/search-path.html?s_tid=CRUX_lftnav)
 
 
-# 3. MATLAB Elements and Syntax
+## 3. MATLAB Elements and Syntax
 
 ### 3a. Basic Elements
 
@@ -450,7 +450,7 @@ MATLAB offers real-time syntax checking and code suggestions. As you type in the
 
 [Andy's Brain Book: Navigation and Matrices](https://andysbrainbook.readthedocs.io/en/latest/Matlab/Matlab_01_Navigation.html)
 
-# 4. Data
+## 4. Data
 
 ### 4a. Data Types
 
@@ -548,7 +548,7 @@ Data types (also referred to as classes) define the kind of data a variable can 
 [Andy's Brain Book: Variables and Structures](https://andysbrainbook.readthedocs.io/en/latest/Matlab/Matlab_02_VariablesStructures.html)
 
 
-# 5. Handling Files
+## 5. Handling Files
 
 ### 5a. MATLAB File Types:
 
@@ -608,7 +608,7 @@ MATLAB supports importing and exporting various data formats such as TXT, CSV, X
 [Documentation: Cloud File Storage](https://www.mathworks.com/help/matlab/cloud-file-storage.html)
 
 
-# 6. Functions
+## 6. Functions
 
 ### 6a. Structuring Code
 
@@ -877,3 +877,6 @@ assert(x > 0, 'x must be positive');
 
 [Andy's Brain Book: Control Structures](https://andysbrainbook.readthedocs.io/en/latest/Matlab/Matlab_04_ControlStructures.html)
 
+
+
+## 7. Neuroimaging Analysis
