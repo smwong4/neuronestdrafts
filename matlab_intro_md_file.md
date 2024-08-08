@@ -440,7 +440,11 @@ MATLAB offers real-time syntax checking and code suggestions. As you type in the
 
 [Documentation: Matrices and Arrays](https://www.mathworks.com/help/matlab/matrices-and-arrays.html?s_tid=CRUX_lftnav)
 
+[Documentation: Create and Run Sections in Code](https://www.mathworks.com/help/matlab/matlab_prog/create-and-run-sections.html)
+
 [Documentation: Creating Scripts](https://www.mathworks.com/help/matlab/matlab_prog/create-scripts.html)
+
+[Documentation: Scripts](https://www.mathworks.com/help/matlab/scripts.html?s_tid=CRUX_lftnav)
 
 [Video: Variables for Numbers, Indexing](https://www.youtube.com/watch?v=sGb_xNsVELw&list=PLn0OLiymPak2HkkG-NToKdP7ye7NlpC8D&index=5)
 
@@ -544,7 +548,7 @@ Data types (also referred to as classes) define the kind of data a variable can 
 [Andy's Brain Book: Variables and Structures](https://andysbrainbook.readthedocs.io/en/latest/Matlab/Matlab_02_VariablesStructures.html)
 
 
-# 5. File Types
+# 5. Handling Files
 
 ### 5a. MATLAB File Types:
 
@@ -580,10 +584,9 @@ MATLAB supports importing and exporting various data formats such as TXT, CSV, X
 
 ### 5d. Suggested Tutorials
 
-[Gettting Data Into MATLAB lesson:](https://matlabacademy.mathworks.com/details/matlab-fundamentals/mlbe#module=2)
+[Lesson: Gettting Data Into MATLAB](https://matlabacademy.mathworks.com/details/matlab-fundamentals/mlbe#module=2)
 
-[M Files](https://www.tutorialspoint.com/matlab_m_files/index.htm)
-
+[Tutorial: M Files](https://www.tutorialspoint.com/matlab_m_files/index.htm)
 
 ### 5e. Supplemental Materials 
 
@@ -604,6 +607,49 @@ MATLAB supports importing and exporting various data formats such as TXT, CSV, X
 
 [Documentation: Cloud File Storage](https://www.mathworks.com/help/matlab/cloud-file-storage.html)
 
+
+# 6. Scripts and Functions
+
+### Structuring Code
+
+### Loops and Conditional Statements 
+
+### Functions
+
+### Suggested Tutorials
+
+[Lesson: Creating Informative Scripts](https://matlabacademy.mathworks.com/details/matlab-fundamentals/mlbe#module=2)
+
+[Tutorial: Storytelling with Scripts](https://matlabacademy.mathworks.com/details/matlab-desktop-tools-and-troubleshooting-scripts/otmldts#module=3)
+
+[Tutorial: Structuring Code](https://www.mathworks.com/matlabcentral/fileexchange/115905-programming-structuring-code)
+
+[Tutorial: Programming Constructs](https://matlabacademy.mathworks.com/details/matlab-fundamentals/mlbe#module=14)
+
+[Tutorial: Increasing Automation with Functions](https://matlabacademy.mathworks.com/details/matlab-fundamentals/mlbe#module=15)
+
+
+### Supplemental Materials
+
+[Video: Creating For Looops](https://www.youtube.com/watch?v=Abgbu32XOh4&list=PLn0OLiymPak2HkkG-NToKdP7ye7NlpC8D&index=7) 
+
+[Live Demo: Loops](https://tutorialspoint.com/matlab/matlab_loops.htm)
+
+[Live Demo: Decision Making](https://www.tutorialspoint.com/matlab/matlab_decisions.htm)
+
+[Documentation: Scripts](https://www.mathworks.com/help/matlab/scripts.html)
+
+[Documentation: Functions](https://www.mathworks.com/help/matlab/functions.html?s_tid=CRUX_lftnav)
+
+[Documentation: Loops and Conditional Statements](https://www.mathworks.com/help/matlab/control-flow.html)
+
+[Andy's Brain Book: Control Structures](https://andysbrainbook.readthedocs.io/en/latest/Matlab/Matlab_04_ControlStructures.html)
+
+# Troubleshooting and Debugging
+
+[Tutorial: Troubleshooting Code](https://matlabacademy.mathworks.com/details/matlab-fundamentals/mlbe#module=16)
+
+[Documentation: Error Handling](https://www.mathworks.com/help/matlab/error-handling.html?s_tid=CRUX_lftnav)
 
 ## ADDITIONAL RESOURCES FOR MATLAB
 MATLAB Desktop – Importing Data, Customizing the MATLAB Desktop, and Setting Preferences from MathWorks Self-Paced Online Courses: MATLAB Desktop Tools and Troubleshooting Scripts Course
