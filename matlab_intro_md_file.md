@@ -610,13 +610,79 @@ MATLAB supports importing and exporting various data formats such as TXT, CSV, X
 
 # 6. Scripts and Functions
 
-### Structuring Code
+### 6a. Structuring Code
 
-### Loops and Conditional Statements 
+Structuring your MATLAB code efficiently is crucial for readability, maintainability, and scalability. Here are some best practices:
 
-### Functions
+1. **Clear Organization**: Break your code into sections using comments and the `%%` operator. This allows you to run sections independently in the MATLAB editor.
+   
+2. **Modular Design**: Write modular code by separating different functionalities into functions. This makes your code reusable and easier to debug.
 
-### Suggested Tutorials
+3. **Consistent Naming Conventions**: Use meaningful and consistent naming conventions for variables, functions, and scripts. This improves code readability and helps others understand your code.
+
+4. **Documentation**: Comment your code generously. Explain the purpose of complex sections, and use comments to describe inputs, outputs, and important variables.
+
+5. **Avoid Magic Numbers**: Use named constants instead of hard-coding numbers in your code. This improves readability and makes your code easier to update.
+
+
+### 6b. Loops and Conditional Statements
+
+Loops and conditional statements are fundamental constructs in programming that control the flow of execution based on conditions.
+
+- **For Loop**: Repeats a group of statements a fixed, predetermined number of times.
+
+ ```matlab
+  for i = 1:10
+    disp(i);
+end
+```
+
+- **While Loop**: Repeats a group of statements an indefinite number of times under control of a logical condition.
+
+```matlab
+i = 1;
+while i <= 10
+    disp(i);
+    i = i + 1;
+end
+```
+
+- **If-Else Statement**: Executes statements conditionally.
+
+ ```matlab
+  x = 5;
+if x > 0
+    disp('x is positive');
+elseif x < 0
+    disp('x is negative');
+else
+    disp('x is zero');
+end
+```
+- **Switch-Case Statement**: Executes one set of statements from several choices.
+  
+ ```matlab
+  switch variable
+    case 1
+        disp('First case');
+    case 2
+        disp('Second case');
+    otherwise
+        disp('Otherwise case');
+end
+```
+### 6c. Functions
+
+Functions allow you to encapsulate code into reusable blocks, improving code organization and reducing redundancy. In MATLAB, functions can be defined in separate files or within scripts.
+
+- **Defining a Function**: A function starts with the `function` keyword, followed by the output variables, the function name, and the input variables.
+
+- **Calling a Function**: You can call a function by using its name and passing the required arguments.
+
+- **Multiple Outputs**: Functions can return multiple outputs.
+
+
+### 6d. Suggested Tutorials
 
 [Lesson: Creating Informative Scripts](https://matlabacademy.mathworks.com/details/matlab-fundamentals/mlbe#module=2)
 
@@ -629,7 +695,7 @@ MATLAB supports importing and exporting various data formats such as TXT, CSV, X
 [Tutorial: Increasing Automation with Functions](https://matlabacademy.mathworks.com/details/matlab-fundamentals/mlbe#module=15)
 
 
-### Supplemental Materials
+### 6e. Supplemental Materials
 
 [Video: Creating For Looops](https://www.youtube.com/watch?v=Abgbu32XOh4&list=PLn0OLiymPak2HkkG-NToKdP7ye7NlpC8D&index=7) 
 
@@ -646,6 +712,10 @@ MATLAB supports importing and exporting various data formats such as TXT, CSV, X
 [Andy's Brain Book: Control Structures](https://andysbrainbook.readthedocs.io/en/latest/Matlab/Matlab_04_ControlStructures.html)
 
 # Troubleshooting and Debugging
+
+
+Error Handling: Implement error handling using try...catch blocks to manage unexpected situations gracefully.
+
 
 [Tutorial: Troubleshooting Code](https://matlabacademy.mathworks.com/details/matlab-fundamentals/mlbe#module=16)
 
