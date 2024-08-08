@@ -1,6 +1,6 @@
-# First Level fMRI Data Analysis in MATLAB
+# fMRI Data Analysis in MATLAB using 
 
-To conduct first-level fMRI data analysis using MATLAB, you will need to follow several steps, including acquiring the necessary data, preprocessing it, and setting up the analysis parameters. Below are the steps and the types of data you will need, along with instructions on how to get this data into MATLAB.
+This tutorial guides you through the process of analyzing fMRI data using MATLAB and SPM (Statistical Parametric Mapping). The focus is on scripting and using MATLAB commands rather than the SPM GUI. We will use a dataset from OpenNeuro and process it using pre-written batch scripts *from the SPM_fMRI_Example_Pipeline repository. The analysis replicates the preprocessing and first-level analysis steps described in a published study.*
 
 ### Types of Data Needed
 
