@@ -182,6 +182,11 @@ This tutorial briefly reviews how to import data, customize your workspace, and 
 
 **Cell:** A cell (sometimes referred to as cell array) is a data structure in MATLAB that can hold different types of data in an array format. Each element of a cell array is called a cell, and can contain different types or sizes of data. Cell arrays are created using curly braces, e.g., `C = {1, 'text', [1, 2, 3]}` creates a 
 
+**Structures:**
+**Function:**
+
+**Tables:**
+
 To help you identify elements, some entries appear in different colors in the Command Window and Editor. By default:
 
 - Keywords are blue.
@@ -435,29 +440,110 @@ MATLAB offers real-time syntax checking and code suggestions. As you type in the
 
 [Documentation: Creating Scripts](https://www.mathworks.com/help/matlab/matlab_prog/create-scripts.html)
 
+[Video: Variables for Numbers, Indexing](https://www.youtube.com/watch?v=sGb_xNsVELw&list=PLn0OLiymPak2HkkG-NToKdP7ye7NlpC8D&index=5)
 
+[Andy's Brain Book: Navigation and Matrices](https://andysbrainbook.readthedocs.io/en/latest/Matlab/Matlab_01_Navigation.html)
 
 # 4. Data
 
-### Relational Operators
+### 4a. Data Types
+
+Data types (also referred to as classes) define the kind of data a variable can hold and the operations that can be performed on it. 
+
+- **Numeric Types**
+   - **double**: This is the default numeric data type in MATLAB. Suitable for general-purpose numerical computations where precision and range are important.
+   - **Integer Types**: Whole numbers only, which require less memory but have less precision and limitations on certain mathematical operations compared to double.
+
+- **Character and String Types**
+   - **char**: Character arrays for storing text created using single quotes.
+   - **string**: String arrays, which are more flexible than character arrays and can be created using double quotes.
+
+- **Logical Type**
+   - **logical**: Represents true or false values.
+
+
+### 4b. Sets and Operators
 
 | Operator | Description         | Example       |
 |----------|---------------------|---------------|
+| **Arithmetic**      |
+| `+`      | Addition                 | `a + b`          |
+| `-`      | Subtraction              | `a - b`          |
+| `*`      | Matrix multiplication    | `a * b`          |
+| `.*`     | Element-wise multiplication | `a .* b`      |
+| `/`      | Matrix right division    | `a / b`          |
+| `./`     | Element-wise right division | `a ./ b`      |
+| `\`      | Matrix left division     | `a \ b`          |
+| `.\`     | Element-wise left division | `a .\ b`      |
+| `^`      | Matrix power             | `a ^ b`          |
+| `.^`     | Element-wise power       | `a .^ b`         |
+| `.'`     | Transpose                | `a.'`            |
+| **Relational**      |
 | `==`     | Equal to            | `a == b`      |
 | `~=`     | Not equal to        | `a ~= b`      |
 | `>`      | Greater than        | `a > b`       |
 | `<`      | Less than           | `a < b`       |
 | `>=`     | Greater than or equal to | `a >= b` |
 | `<=`     | Less than or equal to    | `a <= b` |
-
-### Logical Operators
-
-| Operator | Description         | Example       |
-|----------|---------------------|---------------|
+| **Logical**      |
 | `&`      | Logical AND         | `a & b`       |
 | `|`      | Logical OR          | `a | b`       |
 | `~`      | Logical NOT         | `~a`          |
 | `xor`    | Logical EXCLUSIVE OR| `xor(a, b)`   |
+| **Sets**      |
+| `union`  | Union of two sets        | `union(a, b)`    |
+| `intersect` | Intersection of two sets | `intersect(a, b)`|
+| `setdiff` | Difference of two sets  | `setdiff(a, b)`  |
+| `setxor`  | Symmetric difference of two sets | `setxor(a, b)`|
+| `ismember` | Determine if elements are members of a set | `ismember(a, b)`|
+| `unique` | Unique elements in an array | `unique(a)`      |
+
+### 4c. Suggested Tutorials
+
+[Tutorial: Mathematical and Statistical Operations with Arrays](https://matlabacademy.mathworks.com/details/matlab-fundamentals/mlbe#module=5)
+
+[Tutorial: Conditional Data Selection](https://matlabacademy.mathworks.com/details/matlab-fundamentals/mlbe#module=7)
+
+[Tutorial: Tables of Data](https://matlabacademy.mathworks.com/details/matlab-fundamentals/mlbe#module=9)
+
+[Tutorial: Organizing Tabular Data](https://matlabacademy.mathworks.com/details/matlab-fundamentals/mlbe#module=10)
+
+[Course: A tour of MATLAB Data Types](https://matlabacademy.mathworks.com/details/a-tour-of-matlab-data-types/otmlmdt) 
+
+[Course: Calculations with Vectors and Matrices](https://matlabacademy.mathworks.com/details/calculations-with-vectors-and-matrices/otmlcvm)
+
+[Course: Tables](https://matlabacademy.mathworks.com/details/tables/otmltab)
+
+[Course: Find and Extract Subsets of Data](https://matlabacademy.mathworks.com/details/find-and-extract-subsets-of-data/otmlesd)
+
+[Course: Clean and Prepare Data for Analyses](https://matlabacademy.mathworks.com/details/clean-and-prepare-data-for-analysis/otmlpda)
+
+[Course: Calculations on Grouped Data](https://matlabacademy.mathworks.com/details/calculations-on-grouped-data/otmlcgd)
+
+
+
+### 4d. Supplemental Materials 
+
+[Video: Introducing MATLAB Fundamental Classes](https://www.mathworks.com/videos/introducing-matlab-fundamental-classes-data-types-101503.html)
+
+[Live Demo: Data Types](https://www.tutorialspoint.com/matlab/matlab_data_types.htm)
+
+[Live Demo: Numbers](https://www.tutorialspoint.com/matlab/matlab_numbers.htm)
+
+[Live Demo: Strings](https://www.tutorialspoint.com/matlab/matlab_strings.htm)
+
+
+[Documentation: Fundamental MATLAB Classes](https://www.mathworks.com/help/matlab/matlab_prog/fundamental-matlab-classes.html)
+
+[Documentation: Data Types](https://www.mathworks.com/help/matlab/data-types.html)
+
+[Documentation: Operators and Elementary Operations](https://www.mathworks.com/help/matlab/operators-and-elementary-operations.html)
+
+[Andy's Brain Book: Variables and Structures](https://andysbrainbook.readthedocs.io/en/latest/Matlab/Matlab_02_VariablesStructures.html)
+
+
+
+
 
 # 5. File Types
 
