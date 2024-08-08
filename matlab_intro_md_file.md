@@ -799,7 +799,6 @@ assert(x > 0, 'x must be positive');
 | `break`        | Exits a for or while loop prematurely                   |
 | `continue`     | Skips the remaining code in a loop iteration            |
 | **Functions**      |
-
 | `function`     | Defines a new function                                  |
 | `end`          | Ends a function or control flow statement               |
 | `nargin`       | Returns the number of function input arguments          |
