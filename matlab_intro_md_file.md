@@ -496,7 +496,7 @@ Data types (also referred to as classes) define the kind of data a variable can 
 | `<=`     | Less than or equal to    | `a <= b` |
 | **Logical**      |
 | `&`      | Logical AND         | `a & b`       |
-| `|`      | Logical OR          | `a | b`       |
+| `\|`      | Logical OR          | `a | b`       |
 | `~`      | Logical NOT         | `~a`          |
 | `xor`    | Logical EXCLUSIVE OR| `xor(a, b)`   |
 | **Sets**      |
