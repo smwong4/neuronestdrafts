@@ -180,12 +180,15 @@ This tutorial briefly reviews how to import data, customize your workspace, and 
 - **Matrix:** A matrix is a two-dimensional array of numbers arranged in rows and columns. Matrices are created using square brackets with rows separated by semicolons, e.g., `A = [1, 2, 3; 4, 5, 6]` creates a 2x3 matrix. 
 - **String Array:**: A string array is a one-dimensional or multidimensional array that holds strings. For example, `strArray = ["Hello", "World"]` creates a 1x2 string array.
 
-**Cell:** A cell (sometimes referred to as cell array) is a data structure in MATLAB that can hold different types of data in an array format. Each element of a cell array is called a cell, and can contain different types or sizes of data. Cell arrays are created using curly braces, e.g., `C = {1, 'text', [1, 2, 3]}` creates a 
+**Cell:** A cell (sometimes referred to as a cell array) is a data structure in MATLAB that can hold different types of data in an array format. Each element of a cell array is called a cell, and it can contain different types or sizes of data. Cell arrays are created using curly braces, e.g., `C = {1, 'text', [1, 2, 3]}` creates a cell array with three elements: a number, a string, and a vector.
 
-**Structures:**
-**Function:**
+**Function:** A function is a block of code designed to perform a specific task. Functions in MATLAB are defined using the `function` keyword and can accept inputs and return outputs. For example, `function y = add(x1, x2)` defines a function named `add` that takes two inputs and returns their sum. Functions help in organizing and reusing code. 
 
-**Tables:**
+**Structure:** A structure is a data type in MATLAB that organizes data into fields, each containing a different type of data. Structures are useful for grouping related data. They are created using the `struct` function or by directly assigning values to fields, e.g., `S.name = 'John'; S.age = 25;` creates a structure `S` with fields `name` and `age`.
+
+**Table:** A table is a data type in MATLAB for storing column-oriented or tabular data, such as in a spreadsheet or database. Tables are created using the `table` function, and they can store variables of different types and sizes, e.g., `T = table(Age, Height, Weight)` where `Age`, `Height`, and `Weight` are variables representing columns.
+
+
 
 To help you identify elements, some entries appear in different colors in the Command Window and Editor. By default:
 
