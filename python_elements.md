@@ -73,6 +73,23 @@
 ### **Ellipsis `...`:**
 - **Continuation:** Indicates continuation in code, often used in slicing.
 
+
+Below are some of the key special characters you should be familiar with:
+
+| Character   | Description                                         |
+|-------------|-----------------------------------------------------|
+| `[]`        | Used to create lists and access list elements       |
+| `{}`        | Used to create dictionaries                         |
+| `()`        | Used to group expressions and call functions        |
+| `:`         | Used in function definitions, loops, and slicing    |
+| `#`         | Used for comments                                   |
+| `=`         | Assignment operator                                 |
+| `+`, `-`, `*`, `/`, `//`, `%`, `**` | Arithmetic operators          |
+| `==`, `!=`, `<`, `>`, `<=`, `>=`   | Comparison operators          |
+| `and`, `or`, `not`                 | Logical operators              |
+
+
+
 ## 3. Accessing and Manipulating Elements
 
 ### **Indices:**
